@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Intelligence Quiz</title>
+    <style>
+        /* Perplexity Design System */
+        :root {
+          /* Primitive Color Tokens */
+          --color-white: rgba(255, 255, 255, 1);
+          --color-black: rgba(0, 0, 0, 1);
+          --color-cream-50: rgba(252, 252, 249, 1);
+          --color-cream-100: rgba(255, 255, 253, 1);
+          --color-gray-200: rgba(245, 245, 245, 1);
+          --color-gray-300: rgba(167, 169, 169, 1);
+          --color-gray-400: rgba(119, 124, 124, 1);
+          --color-slate-500: rgba(98, 108, 113, 1);
+          --color-brown-600: rgba(94, 82, 64, 1);
+          --color-charcoal-700: rgba(31, 33, 33, 1);
+          --color-charcoal-800: rgba(38, 40, 40, 1);
+          --color-slate-900: rgba(19, 52, 59, 1);
+          --color-teal-300: rgba(50, 184, 198, 1);
+          --color-teal-400: rgba(45, 166, 178, 1);
+          --color-teal-500: rgba(33, 128, 141, 1);
+          --color-teal-600: rgba(29, 116, 128, 1);
+          --color-teal-700: rgba(26, 104, 115, 1);
+          --color-teal-800: rgba(41, 150, 161, 1);
+          --color-red-400: rgba(255, 84, 89, 1);
+          --color-red-500: rgba(192, 21, 47, 1);
+          --color-orange-400: rgba(230, 129, 97, 1);
+          --color-orange-500: rgba(168, 75, 47, 1);
+        
+          /* RGB versions for opacity control */
+          --color-brown-600-rgb: 94, 82, 64;
+          --color-teal-500-rgb: 33, 128, 141;
+          --color-slate-900-rgb: 19, 52, 59;
+          --color-slate-500-rgb: 98, 108, 113;
+          --color-red-500-rgb: 192, 21, 47;
+          --color-red-400-rgb: 255, 84, 89;
+          --color-orange-500-rgb: 168, 75, 47;
+          --color-orange-400-rgb: 230, 129, 97;
+        
+          /* Background color tokens (Light Mode) */
+          --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+          --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+          --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+          --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+          --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+          --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+          --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+          --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+        
+          /* Semantic Color Tokens (Light Mode) */
+          --color-background: var(--color-cream-50);
+          --color-surface: var(--color-cream-100);
+          --color-text: var(--color-slate-900);
+          --color-text-secondary: var(--color-slate-500);
+          --color-primary: var(--color-teal-500);
+          --color-primary-hover: var(--color-teal-600);
+          --color-primary-active: var(--color-teal-700);
+          --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+          --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+          --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+          --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+          --color-btn-primary-text: var(--color-cream-50);
+          --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+          --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+          --color-error: var(--color-red-500);
+          --color-success: var(--color-teal-500);
+          --color-warning: var(--color-orange-500);
+          --color-info: var(--color-slate-500);
+          --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+          --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+        
+          /* Common style patterns */
+          --focus-ring: 0 0 0 3px var(--color-focus-ring);
+          --focus-outline: 2px solid var(--color-primary);
+          --status-bg-opacity: 0.15;
+          --status-border-opacity: 0.25;
+        
+          /* RGB versions for opacity control */
+          --color-success-rgb: 33, 128, 141;
+          --color-error-rgb: 192, 21, 47;
+          --color-warning-rgb: 168, 75, 47;
+          --color-info-rgb: 98, 108, 113;
+        
+          /* Typography */
+          --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+            BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+            Monaco, Consolas, monospace;
+          --font-size-xs: 11px;
+          --font-size-sm: 12px;
+          --font-size-base: 14px;
+          --font-size-md: 14px;
+          --font-size-lg: 16px;
+          --font-size-xl: 18px;
+          --font-size-2xl: 20px;
+          --font-size-3xl: 24px;
+          --font-size-4xl: 30px;
+          --font-weight-normal: 400;
+          --font-weight-medium: 500;
+          --font-weight-semibold: 550;
+          --font-weight-bold: 600;
+          --line-height-tight: 1.2;
+          --line-height-normal: 1.5;
+          --letter-spacing-tight: -0.01em;
+        
+          /* Spacing */
+          --space-0: 0;
+          --space-1: 1px;
+          --space-2: 2px;
+          --space-4: 4px;
+          --space-6: 6px;
+          --space-8: 8px;
+          --space-10: 10px;
+          --space-12: 12px;
+          --space-16: 16px;
+          --space-20: 20px;
+          --space-24: 24px;
+          --space-32: 32px;
+        
+          /* Border Radius */
+          --radius-sm: 6px;
+          --radius-base: 8px;
+          --radius-md: 10px;
+          --radius-lg: 12px;
+          --radius-full: 9999px;
+        
+          /* Shadows */
+          --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+          --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+          --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+            0 2px 4px -1px rgba(0, 0, 0, 0.02);
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+            0 4px 6px -2px rgba(0, 0, 0, 0.02);
+          --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+        
+          /* Animation */
+          --duration-fast: 150ms;
+          --duration-normal: 250ms;
+          --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        
+          /* Layout */
+          --container-sm: 640px;
+          --container-md: 768px;
+          --container-lg: 1024px;
+          --container-xl: 1280px;
+        }
+        
+        /* Dark mode colors */
+        @media (prefers-color-scheme: dark) {
+          :root {
+            /* RGB versions for opacity control (Dark Mode) */
+            --color-gray-400-rgb: 119, 124, 124;
+            --color-teal-300-rgb: 50, 184, 198;
+            --color-gray-300-rgb: 167, 169, 169;
+            --color-gray-200-rgb: 245, 245, 245;
+        
+            /* Background color tokens (Dark Mode) */
+            --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+            --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+            --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+            --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+            --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+            --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+            --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+            --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+        
+            /* Semantic Color Tokens (Dark Mode) */
+            --color-background: var(--color-charcoal-700);
+            --color-surface: var(--color-charcoal-800);
+            --color-text: var(--color-gray-200);
+            --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+            --color-primary: var(--color-teal-300);
+            --color-primary-hover: var(--color-teal-400);
+            --color-primary-active: var(--color-teal-800);
+            --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+            --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+            --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+            --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+            --color-error: var(--color-red-400);
+            --color-success: var(--color-teal-300);
+            --color-warning: var(--color-orange-400);
+            --color-info: var(--color-gray-300);
+            --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+            --color-btn-primary-text: var(--color-slate-900);
+            --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+            --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+            --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+              inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+            --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+            --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+            --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+        
+            /* RGB versions for dark mode */
+            --color-success-rgb: var(--color-teal-300-rgb);
+            --color-error-rgb: var(--color-red-400-rgb);
+            --color-warning-rgb: var(--color-orange-400-rgb);
+            --color-info-rgb: var(--color-gray-300-rgb);
+          }
+        }
+        
+        /* Base styles */
+        html {
+          font-size: var(--font-size-base);
+          font-family: var(--font-family-base);
+          line-height: var(--line-height-normal);
+          color: var(--color-text);
+          background-color: var(--color-background);
+          -webkit-font-smoothing: antialiased;
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        
+        *,
+        *::before,
+        *::after {
+          box-sizing: inherit;
+        }
+        
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          font-weight: var(--font-weight-semibold);
+          line-height: var(--line-height-tight);
+          color: var(--color-text);
+          letter-spacing: var(--letter-spacing-tight);
+        }
+        
+        h1 {
+          font-size: var(--font-size-4xl);
+        }
+        h2 {
+          font-size: var(--font-size-3xl);
+        }
+        h3 {
+          font-size: var(--font-size-2xl);
+        }
+        h4 {
+          font-size: var(--font-size-xl);
+        }
+        h5 {
+          font-size: var(--font-size-lg);
+        }
+        h6 {
+          font-size: var(--font-size-md);
+        }
+        
+        /* Buttons */
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: var(--space-8) var(--space-16);
+          border-radius: var(--radius-base);
+          font-size: var(--font-size-base);
+          font-weight: 500;
+          line-height: 1.5;
+          cursor: pointer;
+          transition: all var(--duration-normal) var(--ease-standard);
+          border: none;
+          text-decoration: none;
+          position: relative;
+        }
+        
+        .btn:focus-visible {
+          outline: none;
+          box-shadow: var(--focus-ring);
+        }
+        
+        .btn--primary {
+          background: var(--color-primary);
+          color: var(--color-btn-primary-text);
+        }
+        
+        .btn--primary:hover {
+          background: var(--color-primary-hover);
+        }
+        
+        .btn--primary:active {
+          background: var(--color-primary-active);
+        }
+        
+        .btn--secondary {
+          background: var(--color-secondary);
+          color: var(--color-text);
+        }
+        
+        .btn--secondary:hover {
+          background: var(--color-secondary-hover);
+        }
+        
+        .btn--secondary:active {
+          background: var(--color-secondary-active);
+        }
+        
+        .btn:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        
+        /* Card component */
+        .card {
+          background-color: var(--color-surface);
+          border-radius: var(--radius-lg);
+          border: 1px solid var(--color-card-border);
+          box-shadow: var(--shadow-sm);
+          overflow: hidden;
+          transition: box-shadow var(--duration-normal) var(--ease-standard);
+        }
+        
+        .card:hover {
+          box-shadow: var(--shadow-md);
+        }
+        
+        .card__body {
+          padding: var(--space-16);
+        }
+        
+        /* Container layout */
+        .container {
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+          padding-right: var(--space-16);
+          padding-left: var(--space-16);
+        }
+        
+        @media (min-width: 640px) {
+          .container {
+            max-width: var(--container-sm);
+          }
+        }
+        @media (min-width: 768px) {
+          .container {
+            max-width: var(--container-md);
+          }
+        }
+        @media (min-width: 1024px) {
+          .container {
+            max-width: var(--container-lg);
+          }
+        }
+        @media (min-width: 1280px) {
+          .container {
+            max-width: var(--container-xl);
+          }
+        }
+
+        /* Custom Quiz Styles */
+        
+        /* Main content background */
+        .main-content {
+            background-color: var(--color-bg-1);
+            min-height: 100vh;
+        }
+        
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: var(--color-surface);
+            border-bottom: 1px solid var(--color-card-border);
+            padding: var(--space-16) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: 0 var(--space-16);
+        }
+        
+        .nav-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+            margin-bottom: var(--space-16);
+            text-align: center;
+        }
+        
+        .lesson-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-8);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lesson-btn {
+            padding: var(--space-8) var(--space-16);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            background: var(--color-surface);
+            color: var(--color-text);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .lesson-btn:hover {
+            border-color: var(--color-primary);
+            background: var(--color-bg-1);
+        }
+        
+        .lesson-btn.active {
+            background: var(--color-primary);
+            color: var(--color-btn-primary-text);
+            border-color: var(--color-primary);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .lesson-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .lesson-btn:disabled:hover {
+            border-color: var(--color-border);
+            background: var(--color-surface);
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: var(--space-32) auto;
+            padding: var(--space-32);
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: var(--space-32);
+        }
+
+        .quiz-title {
+            font-size: var(--font-size-4xl);
+            color: var(--color-primary);
+            margin-bottom: var(--space-8);
+        }
+
+        .quiz-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+        }
+
+        .question-container {
+            margin-bottom: var(--space-24);
+        }
+
+        .question-number {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-8);
+        }
+
+        .question-text {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-medium);
+            line-height: var(--line-height-normal);
+            margin-bottom: var(--space-24);
+        }
+
+        .answers-grid {
+            display: grid;
+            gap: var(--space-12);
+            margin-bottom: var(--space-24);
+        }
+
+        .answer-button {
+            display: flex;
+            align-items: flex-start;
+            padding: var(--space-16);
+            background: var(--color-surface);
+            border: 2px solid var(--color-card-border);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            text-align: left;
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+        }
+
+        .answer-button:hover {
+            border-color: var(--color-primary);
+            background: var(--color-bg-1);
+        }
+
+        .answer-button:focus-visible {
+            outline: var(--focus-outline);
+            outline-offset: 2px;
+        }
+
+        .answer-button.selected {
+            border-color: var(--color-primary);
+            background: var(--color-bg-1);
+        }
+
+        .answer-button.correct {
+            border-color: var(--color-success);
+            background: rgba(var(--color-success-rgb), 0.1);
+            color: var(--color-success);
+        }
+
+        .answer-button.incorrect {
+            border-color: var(--color-error);
+            background: rgba(var(--color-error-rgb), 0.1);
+            color: var(--color-error);
+        }
+
+        .answer-button:disabled {
+            cursor: not-allowed;
+        }
+
+        .answer-letter {
+            font-weight: var(--font-weight-bold);
+            margin-right: var(--space-12);
+            min-width: 20px;
+        }
+
+        .feedback {
+            padding: var(--space-16);
+            border-radius: var(--radius-md);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-24);
+            text-align: center;
+        }
+
+        .feedback.correct {
+            background: rgba(var(--color-success-rgb), 0.15);
+            border: 1px solid rgba(var(--color-success-rgb), 0.25);
+            color: var(--color-success);
+        }
+
+        .feedback.incorrect {
+            background: rgba(var(--color-error-rgb), 0.15);
+            border: 1px solid rgba(var(--color-error-rgb), 0.25);
+            color: var(--color-error);
+        }
+
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-24);
+        }
+
+        .progress-info {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+        }
+
+        .results-container {
+            text-align: center;
+            padding: var(--space-32);
+        }
+
+        .final-score {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+            margin-bottom: var(--space-16);
+        }
+
+        .score-message {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-32);
+            color: var(--color-text-secondary);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Dark Mode Enhancements */
+        @media (prefers-color-scheme: dark) {
+            /* Improve main content background visibility */
+            .main-content {
+                background-color: var(--color-background);
+            }
+            
+            /* Enhanced navigation bar for dark mode */
+            .nav-bar {
+                background-color: var(--color-surface);
+                border-bottom: 1px solid rgba(var(--color-gray-400-rgb), 0.3);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+            
+            /* Better card visibility in dark mode */
+            .card {
+                background-color: var(--color-surface);
+                border: 1px solid rgba(var(--color-gray-400-rgb), 0.25);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            }
+            
+            .card:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            }
+            
+            /* Quiz container enhancement */
+            .quiz-container {
+                background-color: var(--color-surface);
+                border-radius: var(--radius-lg);
+                padding: var(--space-32);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            }
+            
+            /* Lesson buttons in dark mode */
+            .lesson-btn {
+                background: rgba(var(--color-gray-400-rgb), 0.1);
+                border: 1px solid rgba(var(--color-gray-400-rgb), 0.3);
+                color: var(--color-text);
+            }
+            
+            .lesson-btn:hover:not(:disabled) {
+                background: rgba(var(--color-teal-300-rgb), 0.15);
+                border-color: var(--color-primary);
+            }
+            
+            .lesson-btn.active {
+                background: var(--color-primary);
+                color: var(--color-btn-primary-text);
+                border-color: var(--color-primary);
+                box-shadow: 0 0 12px rgba(var(--color-teal-300-rgb), 0.3);
+            }
+            
+            .lesson-btn:disabled {
+                background: rgba(var(--color-gray-400-rgb), 0.05);
+                opacity: 0.4;
+            }
+            
+            /* Answer buttons in dark mode */
+            .answer-button {
+                background: rgba(var(--color-gray-400-rgb), 0.08);
+                border: 2px solid rgba(var(--color-gray-400-rgb), 0.25);
+                color: var(--color-text);
+            }
+            
+            .answer-button:hover:not(:disabled) {
+                background: rgba(var(--color-teal-300-rgb), 0.12);
+                border-color: var(--color-primary);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            }
+            
+            .answer-button.selected {
+                background: rgba(var(--color-teal-300-rgb), 0.15);
+                border-color: var(--color-primary);
+            }
+            
+            .answer-button.correct {
+                background: rgba(var(--color-teal-300-rgb), 0.2);
+                border-color: var(--color-success);
+                color: var(--color-success);
+                box-shadow: 0 0 12px rgba(var(--color-teal-300-rgb), 0.2);
+            }
+            
+            .answer-button.incorrect {
+                background: rgba(var(--color-red-400-rgb), 0.15);
+                border-color: var(--color-error);
+                color: var(--color-error);
+            }
+            
+            /* Feedback messages in dark mode */
+            .feedback.correct {
+                background: rgba(var(--color-teal-300-rgb), 0.2);
+                border: 1px solid rgba(var(--color-teal-300-rgb), 0.4);
+                color: var(--color-success);
+                box-shadow: 0 2px 8px rgba(var(--color-teal-300-rgb), 0.1);
+            }
+            
+            .feedback.incorrect {
+                background: rgba(var(--color-red-400-rgb), 0.2);
+                border: 1px solid rgba(var(--color-red-400-rgb), 0.4);
+                color: var(--color-error);
+                box-shadow: 0 2px 8px rgba(var(--color-red-400-rgb), 0.1);
+            }
+            
+            /* Button enhancements for dark mode */
+            .btn--primary {
+                background: var(--color-primary);
+                color: var(--color-btn-primary-text);
+                box-shadow: 0 2px 8px rgba(var(--color-teal-300-rgb), 0.3);
+            }
+            
+            .btn--primary:hover {
+                background: var(--color-primary-hover);
+                box-shadow: 0 4px 12px rgba(var(--color-teal-300-rgb), 0.4);
+            }
+            
+            .btn--secondary {
+                background: rgba(var(--color-gray-400-rgb), 0.15);
+                color: var(--color-text);
+                border: 1px solid rgba(var(--color-gray-400-rgb), 0.3);
+            }
+            
+            .btn--secondary:hover {
+                background: rgba(var(--color-gray-400-rgb), 0.25);
+            }
+            
+            /* Question text enhancement */
+            .question-text {
+                color: var(--color-text);
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Results container in dark mode */
+            .results-container {
+                background: var(--color-surface);
+                border-radius: var(--radius-lg);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            }
+            
+            .final-score {
+                color: var(--color-primary);
+                text-shadow: 0 0 20px rgba(var(--color-teal-300-rgb), 0.3);
+            }
+        }
+
+        @font-face {
+          font-family: 'FKGroteskNeue';
+          src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+            format('woff2');
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-title">Data Analytics Course - Module 2: Business Intelligence with Power BI</div>
+                <div class="lesson-nav" id="lesson-nav">
+                    <!-- Lesson buttons will be generated by JavaScript -->
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1 class="quiz-title">Business Intelligence Quiz</h1>
+                <p class="quiz-subtitle">Lesson 01 - Introduction to Business Intelligence</p>
+            </div>
+
+            <div id="quiz-content">
+                <div class="question-container">
+                    <div class="question-number" id="question-number">Question 1 of 10</div>
+                    <div class="question-text" id="question-text"></div>
+                </div>
+
+                <div class="answers-grid" id="answers-grid">
+                    <!-- Answer buttons will be dynamically generated -->
+                </div>
+
+                <div id="feedback" class="feedback hidden">
+                    <!-- Feedback will be shown here -->
+                </div>
+
+                <div class="quiz-controls">
+                    <div class="progress-info" id="progress-info">Select an answer to continue</div>
+                    <button id="next-btn" class="btn btn--primary" disabled>Next Question</button>
+                </div>
+            </div>
+
+            <div id="results-container" class="results-container hidden">
+                <div class="final-score" id="final-score">8/10</div>
+                <div class="score-message" id="score-message">Great job! You have a solid understanding of Business Intelligence concepts.</div>
+                <button id="restart-btn" class="btn btn--primary">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Lessons data
+        const lessonsData = {
+            1: {
+                title: "Lesson 01",
+                name: "Introduction to Business Intelligence",
+                questions: [
+                    {
+                        question: "What is the primary goal of Business Intelligence (BI)?",
+                        options: [
+                            "To replace human decision-making",
+                            "To transform raw data into actionable insights",
+                            "To collect data without analysis",
+                            "To focus solely on data visualization"
+                        ],
+                        correct: 1,
+                        explanation: "The primary goal of BI is to transform raw data into actionable insights that support better business decisions. BI enhances, rather than replaces, human decision-making by providing data-backed information."
+                    },
+                    {
+                        question: "Which of the following is a key benefit of Business Intelligence for organizations?",
+                        options: [
+                            "Increased data storage capacity",
+                            "Enhanced data-driven decision making",
+                            "Reduced employee headcount",
+                            "Higher data storage costs"
+                        ],
+                        correct: 1,
+                        explanation: "Enhanced data-driven decision making is a key benefit of BI. While BI may require storage and infrastructure, the main value comes from improving decision quality through data insights."
+                    },
+                    {
+                        question: "Business Intelligence tools help organizations make decisions based on:",
+                        options: [
+                            "Intuition and gut feelings",
+                            "Historical trends only",
+                            "Random sampling methods",
+                            "Real-time and historical data patterns"
+                        ],
+                        correct: 3,
+                        explanation: "BI tools analyze both real-time and historical data patterns to provide comprehensive insights. Effective BI combines multiple data sources and time periods, not just one type of data."
+                    },
+                    {
+                        question: "Which career role focuses primarily on creating visual representations of data to communicate insights?",
+                        options: [
+                            "Data Engineer",
+                            "Data Visualization Specialist",
+                            "Database Administrator",
+                            "Software Developer"
+                        ],
+                        correct: 1,
+                        explanation: "A Data Visualization Specialist focuses on creating visual representations (charts, dashboards, infographics) to communicate data insights effectively to stakeholders."
+                    },
+                    {
+                        question: "What skill is essential for most Business Intelligence and analytics career pathways?",
+                        options: [
+                            "Advanced programming in multiple languages",
+                            "Understanding data and analytical thinking",
+                            "Graphic design expertise",
+                            "Social media marketing skills"
+                        ],
+                        correct: 1,
+                        explanation: "Understanding data and analytical thinking are foundational skills across all BI and analytics career pathways. While programming can be helpful, analytical thinking and data literacy are more universally essential."
+                    },
+                    {
+                        question: "Which of the following best describes how BI transforms organizations?",
+                        options: [
+                            "It eliminates the need for human analysts",
+                            "It enables data-driven decision making across the organization",
+                            "It reduces the amount of data organizations need to collect",
+                            "It focuses only on financial performance metrics"
+                        ],
+                        correct: 1,
+                        explanation: "BI transforms organizations by enabling data-driven decision making across all levels and departments. It complements human expertise rather than replacing analysts, and extends beyond just financial metrics."
+                    },
+                    {
+                        question: "In the BI ecosystem, which type of professional typically works on building and maintaining data pipelines?",
+                        options: [
+                            "Business Analyst",
+                            "Data Analyst",
+                            "Data Engineer",
+                            "Machine Learning Engineer"
+                        ],
+                        correct: 2,
+                        explanation: "Data Engineers focus on building and maintaining data pipelines, infrastructure, and data workflows. They ensure data is properly collected, stored, and accessible for analysis."
+                    },
+                    {
+                        question: "When evaluating BI tools and technologies in the marketplace, which factor is LEAST important for initial consideration?",
+                        options: [
+                            "The color scheme of the dashboard interface",
+                            "Scalability and integration capabilities",
+                            "Vendor reputation and market presence",
+                            "Ease of use and learning curve"
+                        ],
+                        correct: 0,
+                        explanation: "While aesthetics matter for user experience, the color scheme is the least important factor when initially evaluating BI tools. Scalability, integration, vendor reputation, and ease of use are all more critical technical and practical considerations."
+                    },
+                    {
+                        question: "Which statement best describes the relationship between different data roles in a modern organization?",
+                        options: [
+                            "Each role works independently without collaboration",
+                            "Roles overlap and require similar skill sets",
+                            "Different roles collaborate and bring complementary skills",
+                            "BI roles are being replaced by automation"
+                        ],
+                        correct: 2,
+                        explanation: "In modern organizations, different data roles collaborate and bring complementary skills to create comprehensive BI solutions. Data engineers, analysts, visualization specialists, and business analysts work together, each contributing unique expertise."
+                    },
+                    {
+                        question: "A company wants to implement BI to improve decision-making. What should be their first priority?",
+                        options: [
+                            "Purchasing the most expensive BI software",
+                            "Identifying business problems that need solving",
+                            "Hiring a large team of data scientists",
+                            "Collecting as much data as possible"
+                        ],
+                        correct: 1,
+                        explanation: "Before investing in tools or hiring, organizations should first identify the specific business problems they want to solve with BI. This ensures that subsequent decisions about software and team structure align with actual business needs."
+                    }
+                ]
+            },
+            2: {
+                title: "Lesson 02",
+                name: "Data Types, Sources, and Quality Assessment",
+                questions: [
+                    {
+                        question: "Which of these is a common data type in BI?",
+                        options: [
+                            "Text",
+                            "PDF",
+                            "Image",
+                            "Audio"
+                        ],
+                        correct: 0,
+                        explanation: "Text is a fundamental data type used for names, descriptions, and other alphanumeric information."
+                    },
+                    {
+                        question: "Which data source is structured and table-based?",
+                        options: [
+                            "Excel spreadsheet",
+                            "Email text",
+                            "MP3 files",
+                            "Social media posts"
+                        ],
+                        correct: 0,
+                        explanation: "Excel spreadsheets provide structured data in rows and columns, suitable for analysis."
+                    },
+                    {
+                        question: "What does \"data quality\" primarily refer to?",
+                        options: [
+                            "File size",
+                            "Accuracy and completeness",
+                            "Number of sources",
+                            "Color of charts"
+                        ],
+                        correct: 1,
+                        explanation: "Data quality refers to the accuracy, completeness, consistency, and reliability of data."
+                    },
+                    {
+                        question: "Which tool feature helps you combine data from multiple sources?",
+                        options: [
+                            "Data profiling",
+                            "Data blending",
+                            "Data deletion",
+                            "Data archiving"
+                        ],
+                        correct: 1,
+                        explanation: "Data blending or merging allows combining data from different sources into one dataset."
+                    },
+                    {
+                        question: "A CSV file is an example of which type of data source?",
+                        options: [
+                            "Unstructured",
+                            "Semi-structured",
+                            "Structured",
+                            "Binary"
+                        ],
+                        correct: 2,
+                        explanation: "CSV files contain structured data in a tabular format separated by commas."
+                    },
+                    {
+                        question: "Which issue indicates a data quality problem?",
+                        options: [
+                            "Consistent timestamps",
+                            "Complete records",
+                            "Duplicate entries",
+                            "Unique identifiers"
+                        ],
+                        correct: 2,
+                        explanation: "Duplicate entries lead to inaccuracies and skewed analysis, indicating a quality issue."
+                    },
+                    {
+                        question: "What is a common remediation strategy for missing data?",
+                        options: [
+                            "Ignore the missing rows",
+                            "Remove the entire dataset",
+                            "Impute or estimate missing values",
+                            "Publish incomplete reports"
+                        ],
+                        correct: 2,
+                        explanation: "Imputing or estimating missing values helps maintain dataset integrity for analysis."
+                    },
+                    {
+                        question: "Which data source is least likely to require transformation before analysis?",
+                        options: [
+                            "API response in JSON",
+                            "Database table",
+                            "Real-time sensor output",
+                            "Cleaned Excel table"
+                        ],
+                        correct: 3,
+                        explanation: "A cleaned Excel table is already structured and often ready for analysis with minimal transformation."
+                    },
+                    {
+                        question: "Which scenario best illustrates inconsistent data formatting?",
+                        options: [
+                            "Dates in YYYY-MM-DD but some as MM/DD/YYYY",
+                            "All names in uppercase",
+                            "Prices stored as numbers",
+                            "Product IDs unique"
+                        ],
+                        correct: 0,
+                        explanation: "Having multiple date formats in the same dataset causes inconsistency and requires cleaning."
+                    },
+                    {
+                        question: "When assessing a new data source, what should be your first step?",
+                        options: [
+                            "Start building visuals",
+                            "Check data quality metrics",
+                            "Publish to users",
+                            "Automate refresh schedules"
+                        ],
+                        correct: 1,
+                        explanation: "The first step is to assess data quality metrics like completeness, accuracy, and consistency before analysis."
+                    }
+                ]
+            },
+            3: {
+                title: "Lesson 03",
+                name: "Descriptive Statistics and Distributions",
+                questions: [
+                    {
+                        question: "What is the measure of central tendency calculated by summing all values and dividing by count?",
+                        options: [
+                            "Median",
+                            "Mode",
+                            "Mean",
+                            "Range"
+                        ],
+                        correct: 2,
+                        explanation: "The mean is calculated by summing all values and dividing by the number of values."
+                    },
+                    {
+                        question: "Which statistic represents the most frequently occurring value in a dataset?",
+                        options: [
+                            "Mean",
+                            "Mode",
+                            "Standard deviation",
+                            "Variance"
+                        ],
+                        correct: 1,
+                        explanation: "The mode is the value that appears most frequently in a dataset."
+                    },
+                    {
+                        question: "What does the range of a dataset measure?",
+                        options: [
+                            "Average distance from mean",
+                            "Difference between maximum and minimum values",
+                            "Most common value",
+                            "Square root of variance"
+                        ],
+                        correct: 1,
+                        explanation: "The range is the difference between the maximum and minimum values in a dataset."
+                    },
+                    {
+                        question: "Which measure shows how spread out data are around the mean?",
+                        options: [
+                            "Median",
+                            "Variance",
+                            "Mode",
+                            "Count"
+                        ],
+                        correct: 1,
+                        explanation: "Variance measures the average squared deviation of each value from the mean."
+                    },
+                    {
+                        question: "When should you use the median instead of the mean?",
+                        options: [
+                            "Data are normally distributed",
+                            "Dataset has no outliers",
+                            "Data are heavily skewed",
+                            "Sample size is large"
+                        ],
+                        correct: 2,
+                        explanation: "The median is preferred for skewed data because it is less affected by extreme values and outliers."
+                    },
+                    {
+                        question: "Which chart is best for showing distribution of a continuous variable?",
+                        options: [
+                            "Pie chart",
+                            "Histogram",
+                            "Scatter plot",
+                            "Bar chart"
+                        ],
+                        correct: 1,
+                        explanation: "A histogram displays the distribution of a continuous variable by grouping data into bins."
+                    },
+                    {
+                        question: "What does a box plot display?",
+                        options: [
+                            "Relationship between two variables",
+                            "Distribution summary including median and quartiles",
+                            "Frequency of categorical values",
+                            "Trend over time"
+                        ],
+                        correct: 1,
+                        explanation: "A box plot summarizes distribution by showing median, quartiles, and potential outliers."
+                    },
+                    {
+                        question: "Which measure of dispersion is the square root of variance?",
+                        options: [
+                            "Range",
+                            "Interquartile range",
+                            "Standard deviation",
+                            "Coefficient of variation"
+                        ],
+                        correct: 2,
+                        explanation: "The standard deviation is the square root of the variance, showing dispersion in the same units as the data."
+                    },
+                    {
+                        question: "In a right-skewed distribution, how do mean and median compare?",
+                        options: [
+                            "Mean < Median",
+                            "Mean = Median",
+                            "Mean > Median",
+                            "Mean and median unrelated"
+                        ],
+                        correct: 2,
+                        explanation: "In a right-skewed distribution, the mean is pulled toward the tail and is greater than the median."
+                    },
+                    {
+                        question: "Which scenario requires different statistical measures for nominal vs. interval data?",
+                        options: [
+                            "Calculating average temperature",
+                            "Finding most common category vs. average value",
+                            "Plotting time series",
+                            "Analyzing correlation"
+                        ],
+                        correct: 1,
+                        explanation: "Nominal data use mode (most common category), while interval data use mean or median (average values)."
+                    }
+                ]
+            },
+            4: {
+                title: "Lesson 04",
+                name: "Introduction to Power BI Ecosystem",
+                questions: [
+                    {
+                        question: "Which application is used for creating Power BI reports on a desktop?",
+                        options: [
+                            "Power BI Service",
+                            "Power BI Desktop",
+                            "Power BI Mobile",
+                            "Power BI Report Builder"
+                        ],
+                        correct: 1,
+                        explanation: "Power BI Desktop is the primary desktop application for building reports and visualizations."
+                    },
+                    {
+                        question: "What component of Power BI lets you prepare and transform data before analysis?",
+                        options: [
+                            "Report view",
+                            "Data view",
+                            "Power Query",
+                            "Dashboard view"
+                        ],
+                        correct: 2,
+                        explanation: "Power Query provides data preparation and transformation capabilities within Power BI Desktop."
+                    },
+                    {
+                        question: "Which of these is NOT a Power BI license type?",
+                        options: [
+                            "Free",
+                            "Pro",
+                            "Premium Per User",
+                            "Enterprise Analytics"
+                        ],
+                        correct: 3,
+                        explanation: "\"Enterprise Analytics\" is not a recognized Power BI license; Free, Pro, and Premium Per User are valid options."
+                    },
+                    {
+                        question: "Where do you switch between Report, Data, and Model views in Power BI Desktop?",
+                        options: [
+                            "Home ribbon",
+                            "Navigation pane",
+                            "View selector",
+                            "Status bar"
+                        ],
+                        correct: 2,
+                        explanation: "The view selector in the left-hand pane allows switching among Report, Data, and Model views."
+                    },
+                    {
+                        question: "Which ribbon tab contains options to import data from Excel, CSV, and databases?",
+                        options: [
+                            "Home",
+                            "Insert",
+                            "Modeling",
+                            "View"
+                        ],
+                        correct: 0,
+                        explanation: "The Home tab in Power BI Desktop includes Import Data options for various sources."
+                    },
+                    {
+                        question: "What is the first step after opening Power BI Desktop to start a new report?",
+                        options: [
+                            "Create relationships",
+                            "Connect to data",
+                            "Add visuals",
+                            "Save the file"
+                        ],
+                        correct: 1,
+                        explanation: "Connecting to data is the initial action to bring in datasets before creating visuals."
+                    },
+                    {
+                        question: "Which pane shows all imported tables and fields for use in visuals?",
+                        options: [
+                            "Visualizations pane",
+                            "Filters pane",
+                            "Fields pane",
+                            "Bookmarks pane"
+                        ],
+                        correct: 2,
+                        explanation: "The Fields pane displays tables and fields from the data model for building visuals."
+                    },
+                    {
+                        question: "To create a bar chart, you must select a visual type then drag fields onto which area?",
+                        options: [
+                            "Canvas",
+                            "Filters area",
+                            "Axis and Values wells",
+                            "Bookmarks well"
+                        ],
+                        correct: 2,
+                        explanation: "Axis and Values wells in the Visualizations pane are used to assign data fields to chart axes."
+                    },
+                    {
+                        question: "Which feature allows you to change data types and apply transformations step by step?",
+                        options: [
+                            "DAX functions",
+                            "Power Query Editor",
+                            "Data model relationships",
+                            "Quick Insights"
+                        ],
+                        correct: 1,
+                        explanation: "Power Query Editor provides an interface for sequential data transformations and type changes."
+                    },
+                    {
+                        question: "Where can you view and manage report themes and formatting options?",
+                        options: [
+                            "Data view",
+                            "Format pane",
+                            "Modeling tab",
+                            "View ribbon"
+                        ],
+                        correct: 1,
+                        explanation: "The Format pane contains options for applying themes, formatting visuals, and adjusting layout properties."
+                    }
+                ]
+            },
+            5: {
+                title: "Lesson 05",
+                name: "Data Preparation with Power Query",
+                questions: [
+                    {
+                        question: "Which Power BI feature lets you connect to data sources and transform data?",
+                        options: [
+                            "Data view",
+                            "Power Query",
+                            "Report view",
+                            "Modeling pane"
+                        ],
+                        correct: 1,
+                        explanation: "Power Query is the feature in Power BI Desktop used for data connection and transformation."
+                    },
+                    {
+                        question: "Which file type is NOT directly supported by Power Query for import?",
+                        options: [
+                            "Excel (.xlsx)",
+                            "CSV (.csv)",
+                            "PDF (.pdf)",
+                            "Database table"
+                        ],
+                        correct: 2,
+                        explanation: "Power Query does not natively import PDF files; it supports Excel, CSV, databases, and APIs."
+                    },
+                    {
+                        question: "What is the purpose of a data quality checklist?",
+                        options: [
+                            "To design report visuals",
+                            "To document transformation steps",
+                            "To ensure data meets standards before analysis",
+                            "To schedule data refresh"
+                        ],
+                        correct: 2,
+                        explanation: "A data quality checklist ensures that accuracy, completeness, and other standards are met before analysis."
+                    },
+                    {
+                        question: "Which transformation removes duplicate rows in Power Query?",
+                        options: [
+                            "Remove Errors",
+                            "Remove Duplicates",
+                            "Keep Top Rows",
+                            "Replace Values"
+                        ],
+                        correct: 1,
+                        explanation: "The Remove Duplicates command eliminates duplicate records from a query."
+                    },
+                    {
+                        question: "How do you handle missing values by replacing them with a default value?",
+                        options: [
+                            "Remove Rows",
+                            "Fill Down",
+                            "Replace Values",
+                            "Group By"
+                        ],
+                        correct: 2,
+                        explanation: "The Replace Values transformation lets you fill missing or incorrect values with a specified default."
+                    },
+                    {
+                        question: "Which step documents all transformations applied in Power Query?",
+                        options: [
+                            "Applied Steps pane",
+                            "Advanced Editor",
+                            "Data Profiling view",
+                            "Relationships view"
+                        ],
+                        correct: 0,
+                        explanation: "The Applied Steps pane shows each transformation step applied to the data in sequence."
+                    },
+                    {
+                        question: "To combine tables from two sources, which operation should you use?",
+                        options: [
+                            "Append Queries",
+                            "Split Columns",
+                            "Transpose Table",
+                            "Pivot Column"
+                        ],
+                        correct: 0,
+                        explanation: "Append Queries stacks one table on top of another, combining rows from both sources."
+                    },
+                    {
+                        question: "Which feature allows you to preview column statistics and data distribution?",
+                        options: [
+                            "Data view",
+                            "Applied Steps",
+                            "Data Profiling",
+                            "Relationships view"
+                        ],
+                        correct: 2,
+                        explanation: "Data Profiling provides column statistics like distribution, count, and quality indicators in Power Query."
+                    },
+                    {
+                        question: "In Power Query, where do you write or edit M code for advanced transformations?",
+                        options: [
+                            "Data view",
+                            "Modeling pane",
+                            "Advanced Editor",
+                            "Format pane"
+                        ],
+                        correct: 2,
+                        explanation: "Advanced Editor displays the underlying M code for all query steps, allowing manual editing of transformations."
+                    },
+                    {
+                        question: "What is the recommended documentation to share your data preparation process professionally?",
+                        options: [
+                            "Data quality checklist",
+                            "Power Query Applied Steps export",
+                            "Transformation documentation in markdown",
+                            "Data model diagram export"
+                        ],
+                        correct: 2,
+                        explanation: "Professional documentation of transformations (e.g., markdown report) communicates the data preparation process clearly to stakeholders."
+                    }
+                ]
+            },
+            6: {
+                title: "Lesson 06",
+                name: "Designing Data Models",
+                questions: [
+                    {
+                        question: "What schema organizes data into fact and dimension tables?",
+                        options: [
+                            "Flat schema",
+                            "Star schema",
+                            "Snowflake schema",
+                            "Network schema"
+                        ],
+                        correct: 1,
+                        explanation: "Star schema uses fact tables connected to dimension tables for efficient querying."
+                    },
+                    {
+                        question: "Which table stores measurable, quantitative data?",
+                        options: [
+                            "Dimension table",
+                            "Lookup table",
+                            "Fact table",
+                            "Staging table"
+                        ],
+                        correct: 2,
+                        explanation: "Fact tables contain quantitative measures used for analysis."
+                    },
+                    {
+                        question: "What is a dimension table used for?",
+                        options: [
+                            "Storing raw data",
+                            "Storing descriptive attributes",
+                            "Storing transaction logs",
+                            "Storing ETL logs"
+                        ],
+                        correct: 1,
+                        explanation: "Dimension tables hold descriptive attributes that provide context to fact data."
+                    },
+                    {
+                        question: "Which relationship cardinality means each record in Table A matches only one record in Table B?",
+                        options: [
+                            "Many-to-many",
+                            "One-to-many",
+                            "One-to-one",
+                            "Many-to-one"
+                        ],
+                        correct: 2,
+                        explanation: "One-to-one cardinality means each record in each table corresponds to a single matching record in the other table."
+                    },
+                    {
+                        question: "Which direction should cross-filtering be set when you want filters to apply both ways?",
+                        options: [
+                            "Single direction",
+                            "Bi-directional",
+                            "No filtering",
+                            "Hidden"
+                        ],
+                        correct: 1,
+                        explanation: "Bi-directional filtering allows filters to propagate in both directions between related tables."
+                    },
+                    {
+                        question: "What is the main benefit of using star schema in BI models?",
+                        options: [
+                            "Simplifies queries",
+                            "Increases storage",
+                            "Complicates joins",
+                            "Reduces data freshness"
+                        ],
+                        correct: 0,
+                        explanation: "Star schema simplifies query logic and improves performance by organizing data into clear fact and dimension tables."
+                    },
+                    {
+                        question: "Which hierarchical feature allows drilling up and down in reports?",
+                        options: [
+                            "Row-level security",
+                            "Calculated columns",
+                            "Table relationships",
+                            "Hierarchies"
+                        ],
+                        correct: 3,
+                        explanation: "Hierarchies enable users to navigate data at different granularity levels in reports."
+                    },
+                    {
+                        question: "What type of relationship should you avoid to reduce ambiguity and performance issues?",
+                        options: [
+                            "One-to-many",
+                            "Many-to-one",
+                            "Many-to-many",
+                            "One-to-one"
+                        ],
+                        correct: 2,
+                        explanation: "Many-to-many relationships can lead to ambiguous query results and performance degradation."
+                    },
+                    {
+                        question: "Which practice optimizes data model performance?",
+                        options: [
+                            "Importing all columns",
+                            "Creating unnecessary relationships",
+                            "Hiding unused fields",
+                            "Avoiding star schema"
+                        ],
+                        correct: 2,
+                        explanation: "Hiding unused fields reduces model size and improves query performance."
+                    },
+                    {
+                        question: "When defining table relationships, what is critical for accurate filtering?",
+                        options: [
+                            "Matching data types",
+                            "Matching file names",
+                            "Matching color themes",
+                            "Matching column widths"
+                        ],
+                        correct: 0,
+                        explanation: "Consistent data types between related columns ensure accurate filtering and joins in the data model."
+                    }
+                ]
+            },
+            7: {
+                title: "Lesson 07",
+                name: "DAX - Foundation",
+                questions: [
+                    {
+                        question: "What does DAX stand for in Power BI?",
+                        options: [
+                            "Data Analysis Expressions",
+                            "Data Access Extension",
+                            "Distributed Analysis Xpress",
+                            "Data Aggregation XML"
+                        ],
+                        correct: 0,
+                        explanation: "DAX stands for Data Analysis Expressions."
+                    },
+                    {
+                        question: "Which DAX function returns the sum of a column?",
+                        options: [
+                            "AVERAGE",
+                            "SUM",
+                            "COUNT",
+                            "DISTINCTCOUNT"
+                        ],
+                        correct: 1,
+                        explanation: "SUM calculates the total of all values in a numeric column."
+                    },
+                    {
+                        question: "What is a calculated column?",
+                        options: [
+                            "A column created in source data",
+                            "A column defined by a DAX formula per row",
+                            "A measure used in visuals",
+                            "A hidden table"
+                        ],
+                        correct: 1,
+                        explanation: "A calculated column uses a DAX formula to compute values at the row level in the data model."
+                    },
+                    {
+                        question: "Which function counts non-blank values in a column?",
+                        options: [
+                            "COUNT",
+                            "COUNTROWS",
+                            "COUNTA",
+                            "COUNTBLANK"
+                        ],
+                        correct: 2,
+                        explanation: "COUNTA counts the number of non-blank values in a column."
+                    },
+                    {
+                        question: "What does \"row context\" refer to in DAX?",
+                        options: [
+                            "Context of the entire table",
+                            "Context of a single row during calculation",
+                            "Context from report filters",
+                            "Context of user permissions"
+                        ],
+                        correct: 1,
+                        explanation: "Row context means the evaluation context for each row when computing calculated columns or iterators."
+                    },
+                    {
+                        question: "Which DAX function returns the average of values in a column?",
+                        options: [
+                            "SUMX",
+                            "AVERAGE",
+                            "AVERAGEX",
+                            "MEDIAN"
+                        ],
+                        correct: 1,
+                        explanation: "AVERAGE computes the arithmetic mean of values in a numeric column."
+                    },
+                    {
+                        question: "What is a measure in DAX?",
+                        options: [
+                            "A static column in the data model",
+                            "A calculation evaluated on demand",
+                            "A hidden dimension table",
+                            "A filter applied to visuals"
+                        ],
+                        correct: 1,
+                        explanation: "A measure is a DAX formula that calculates values dynamically based on filter context in reports."
+                    },
+                    {
+                        question: "Which DAX function returns the number of rows in a table?",
+                        options: [
+                            "ROWCOUNT",
+                            "COUNT",
+                            "COUNTROWS",
+                            "ROWS"
+                        ],
+                        correct: 2,
+                        explanation: "COUNTROWS returns the number of rows in the specified table."
+                    },
+                    {
+                        question: "What does \"filter context\" mean in DAX?",
+                        options: [
+                            "Filters applied by slicers and visuals",
+                            "The row currently being evaluated",
+                            "The file-level permissions",
+                            "The local machine settings"
+                        ],
+                        correct: 0,
+                        explanation: "Filter context refers to the set of filters applied to data by visuals, slicers, and report elements during measure evaluation."
+                    },
+                    {
+                        question: "Which function iterates over a table performing a calculation per row and then aggregates results?",
+                        options: [
+                            "SUM",
+                            "SUMX",
+                            "CALCULATE",
+                            "FILTER"
+                        ],
+                        correct: 1,
+                        explanation: "SUMX iterates row by row over a table, evaluates an expression, and then sums the results."
+                    }
+                ]
+            },
+            8: {
+                title: "Lesson 08",
+                name: "DAX - Advanced",
+                questions: [
+                    {
+                        question: "Which DAX function is used for time intelligence comparisons like year-over-year growth?",
+                        options: [
+                            "DATEADD",
+                            "SAMEPERIODLASTYEAR",
+                            "DATESINPERIOD",
+                            "NEXTDAY"
+                        ],
+                        correct: 1,
+                        explanation: "SAMEPERIODLASTYEAR shifts the filter context to the same period in the previous year for comparisons."
+                    },
+                    {
+                        question: "Which function modifies filter context and evaluates an expression under that new context?",
+                        options: [
+                            "CALCULATE",
+                            "FILTER",
+                            "ALL",
+                            "VALUES"
+                        ],
+                        correct: 0,
+                        explanation: "CALCULATE changes filter context and then evaluates the given expression within that context."
+                    },
+                    {
+                        question: "What does the ALL function do in DAX?",
+                        options: [
+                            "Removes all filters on a table or column",
+                            "Applies all filters from visuals",
+                            "Returns all tables",
+                            "Counts all columns"
+                        ],
+                        correct: 0,
+                        explanation: "ALL clears existing filter context on specified columns or tables, enabling context manipulation."
+                    },
+                    {
+                        question: "Which iterator function returns the average of an expression evaluated row by row?",
+                        options: [
+                            "AVERAGE",
+                            "AVERAGEX",
+                            "SUMX",
+                            "COUNTX"
+                        ],
+                        correct: 1,
+                        explanation: "AVERAGEX evaluates an expression for each row of a table and returns the average of the results."
+                    },
+                    {
+                        question: "For calculating month-over-month change, which function is MOST appropriate?",
+                        options: [
+                            "PREVIOUSMONTH",
+                            "PARALLELPERIOD",
+                            "NEXTMONTH",
+                            "SAMEPERIODLASTYEAR"
+                        ],
+                        correct: 0,
+                        explanation: "PREVIOUSMONTH shifts context to the previous month, making it suitable for month-over-month comparisons."
+                    },
+                    {
+                        question: "What is the primary use of an iterator function like SUMX or RANKX?",
+                        options: [
+                            "To filter tables",
+                            "To iterate row by row and aggregate results",
+                            "To clear filters",
+                            "To calculate row count"
+                        ],
+                        correct: 1,
+                        explanation: "Iterators work row by row on a table, evaluating an expression for each row before aggregating the results."
+                    },
+                    {
+                        question: "Which function would you use to rank products by sales within each category?",
+                        options: [
+                            "RANK",
+                            "RANKX",
+                            "RANK.EQ",
+                            "RANK.AUTO"
+                        ],
+                        correct: 1,
+                        explanation: "RANKX evaluates an expression over a table and returns the ranking for each row."
+                    },
+                    {
+                        question: "When building complex metrics, why use FILTER inside CALCULATE instead of a WHERE clause?",
+                        options: [
+                            "DAX does not support WHERE; FILTER is the DAX filtering function",
+                            "FILTER is faster",
+                            "WHERE clears all context",
+                            "WHERE applies only at the source"
+                        ],
+                        correct: 0,
+                        explanation: "DAX uses FILTER within CALCULATE for context filtering since there is no SQL-style WHERE in DAX."
+                    },
+                    {
+                        question: "What is the effect of combining ALL with CALCULATE on a measure?",
+                        options: [
+                            "It applies only current filters",
+                            "It removes filters, performing calculations on full data",
+                            "It increases filter sensitivity",
+                            "It hides the measure"
+                        ],
+                        correct: 1,
+                        explanation: "Combining ALL inside CALCULATE removes filters so that the measure evaluates over the entire dataset."
+                    },
+                    {
+                        question: "Which advanced DAX scenario requires nested CALCULATE functions for context transition?",
+                        options: [
+                            "Simple sum of a column",
+                            "Dynamic security rules",
+                            "Year-to-date total",
+                            "Complex KPI with conditional logic"
+                        ],
+                        correct: 3,
+                        explanation: "Complex KPIs often require nested CALCULATE for multiple context modifications and conditional logic within a single measure."
+                    }
+                ]
+            },
+            9: {
+                title: "Lesson 09",
+                name: "Data Visualization",
+                questions: [
+                    {
+                        question: "Which chart type is best for showing trends over time?",
+                        options: [
+                            "Bar chart",
+                            "Line chart",
+                            "Pie chart",
+                            "Scatter plot"
+                        ],
+                        correct: 1,
+                        explanation: "Line charts display continuous data points over time, making trends easy to spot."
+                    },
+                    {
+                        question: "Which principle ensures charts are accessible to users with color vision deficiencies?",
+                        options: [
+                            "High data density",
+                            "Consistent layout",
+                            "Color theory",
+                            "Use of colorblind-friendly palettes"
+                        ],
+                        correct: 3,
+                        explanation: "Using colorblind-friendly palettes ensures that all users can distinguish chart elements regardless of color vision ability."
+                    },
+                    {
+                        question: "What does visual hierarchy help emphasize in a dashboard?",
+                        options: [
+                            "Data accuracy",
+                            "The most important information",
+                            "Table layouts",
+                            "Font sizes"
+                        ],
+                        correct: 1,
+                        explanation: "Visual hierarchy guides the viewer's eye to the most critical insights first through size, color, or position."
+                    },
+                    {
+                        question: "Which visualization type is most appropriate for comparing parts of a whole?",
+                        options: [
+                            "Scatter plot",
+                            "Donut chart",
+                            "Line chart",
+                            "Heat map"
+                        ],
+                        correct: 1,
+                        explanation: "Donut charts, like pie charts, show how individual categories contribute to a total."
+                    },
+                    {
+                        question: "Which feature in Power BI creates interactive filters on visuals?",
+                        options: [
+                            "Bookmarks",
+                            "Slicers",
+                            "Tooltips",
+                            "Drill-through"
+                        ],
+                        correct: 1,
+                        explanation: "Slicers allow users to interactively filter data on multiple visuals in a report."
+                    },
+                    {
+                        question: "Why should you avoid using 3D charts for data visualization?",
+                        options: [
+                            "They look modern",
+                            "They add clarity",
+                            "They can distort data interpretation",
+                            "They require special licenses"
+                        ],
+                        correct: 2,
+                        explanation: "3D charts can distort proportions and make it harder to accurately compare values."
+                    },
+                    {
+                        question: "Which visual element provides additional context when hovering over data points?",
+                        options: [
+                            "Titles",
+                            "Legends",
+                            "Tooltips",
+                            "Gridlines"
+                        ],
+                        correct: 2,
+                        explanation: "Tooltips display detailed data values and context when the user hovers over chart elements."
+                    },
+                    {
+                        question: "What does \"white space\" help achieve in dashboard design?",
+                        options: [
+                            "Fills gaps",
+                            "Reduces readability",
+                            "Improves focus on content",
+                            "Increases data density"
+                        ],
+                        correct: 2,
+                        explanation: "White space prevents clutter, making dashboards easier to read and helping users focus on key insights."
+                    },
+                    {
+                        question: "Which chart type is best for showing the relationship between two numerical variables?",
+                        options: [
+                            "Pie chart",
+                            "Bar chart",
+                            "Scatter plot",
+                            "Donut chart"
+                        ],
+                        correct: 2,
+                        explanation: "Scatter plots show correlations by plotting two variables on X and Y axes, revealing patterns and relationships."
+                    },
+                    {
+                        question: "When designing for accessibility, which practice ensures screen reader compatibility?",
+                        options: [
+                            "Use custom fonts",
+                            "Add alt text to visuals",
+                            "Increase chart complexity",
+                            "Use only color to encode data"
+                        ],
+                        correct: 1,
+                        explanation: "Providing alt text ensures that screen readers can describe visual content to users with visual impairments."
+                    }
+                ]
+            },
+            10: {
+                title: "Lesson 10",
+                name: "Reports and Analytics Integration",
+                questions: [
+                    {
+                        question: "Which Power BI feature automatically analyzes your data to find patterns and insights?",
+                        options: [
+                            "Quick Insights",
+                            "Drill-through",
+                            "Bookmarks",
+                            "Format pane"
+                        ],
+                        correct: 0,
+                        explanation: "Quick Insights uses AI algorithms to scan datasets and highlight notable trends and outliers."
+                    },
+                    {
+                        question: "What functionality lets users navigate from summary to detailed report pages?",
+                        options: [
+                            "Slicers",
+                            "Drill-through",
+                            "Tooltips",
+                            "Data labels"
+                        ],
+                        correct: 1,
+                        explanation: "Drill-through enables users to click on a data point and jump to a detailed page filtered to that context."
+                    },
+                    {
+                        question: "Which feature captures the current state of a report page, including filters and slicers?",
+                        options: [
+                            "Bookmark",
+                            "Visual-level filter",
+                            "Report-level filter",
+                            "Sync slicers"
+                        ],
+                        correct: 0,
+                        explanation: "Bookmarks store the visual state and filter selections of a report page for easy navigation and storytelling."
+                    },
+                    {
+                        question: "Which type of custom visual must be imported from the marketplace or external file?",
+                        options: [
+                            "Line chart",
+                            "Bar chart",
+                            "Map visual",
+                            "Built-in pie chart"
+                        ],
+                        correct: 2,
+                        explanation: "Map visuals such as ArcGIS maps require importing from the marketplace as custom visuals."
+                    },
+                    {
+                        question: "Which AI-powered visualization helps decompose a measure into contributing factors?",
+                        options: [
+                            "Key influencers",
+                            "Decomposition Tree",
+                            "Q&A visual",
+                            "KPI visual"
+                        ],
+                        correct: 1,
+                        explanation: "The decomposition tree breaks down a measure by dimensions, showing how each contributes to the total."
+                    },
+                    {
+                        question: "How do you enable natural language queries for end users in Power BI reports?",
+                        options: [
+                            "Add tooltip",
+                            "Use Q&A visual",
+                            "Create drill-through",
+                            "Configure RLS"
+                        ],
+                        correct: 1,
+                        explanation: "The Q&A visual allows users to type questions in natural language and get answers in the form of visuals."
+                    },
+                    {
+                        question: "Which feature allows embedding of a Power BI report into another application?",
+                        options: [
+                            "Publish to web",
+                            "Export to PDF",
+                            "Power BI embedded",
+                            "Quick Insights"
+                        ],
+                        correct: 2,
+                        explanation: "Power BI Embedded is a service/API that enables embedding interactive reports in custom applications."
+                    },
+                    {
+                        question: "What is required to use custom visuals in Power BI Desktop?",
+                        options: [
+                            "Enable Developer Mode",
+                            "Sign into Power BI Service",
+                            "Import from Marketplace or file",
+                            "Configure data gateway"
+                        ],
+                        correct: 2,
+                        explanation: "Custom visuals must be imported from the AppSource marketplace or loaded from external files in Desktop."
+                    },
+                    {
+                        question: "Which feature ensures users can explore different scenarios by changing filter values without altering the report?",
+                        options: [
+                            "Bookmarks",
+                            "What-if parameters",
+                            "Drill-through",
+                            "Sync slicers"
+                        ],
+                        correct: 1,
+                        explanation: "What-if parameters create dynamic slicer controls that let users adjust values and see real-time impact on visuals."
+                    },
+                    {
+                        question: "To include advanced analytics like clustering and forecasting in a report, which visual do you use?",
+                        options: [
+                            "Scatter chart",
+                            "Analytics pane",
+                            "Decomposition Tree",
+                            "KPI visual"
+                        ],
+                        correct: 1,
+                        explanation: "The Analytics pane adds options such as clustering, forecasting, trend lines, and averages to supported visuals."
+                    }
+                ]
+            },
+            11: {
+                title: "Lesson 11",
+                name: "Sharing, Security, and Collaboration",
+                questions: [
+                    {
+                        question: "Which Power BI feature restricts data access at the row level based on user roles?",
+                        options: [
+                            "Workspace roles",
+                            "Row-level security (RLS)",
+                            "Report-level filters",
+                            "App permissions"
+                        ],
+                        correct: 1,
+                        explanation: "Row-level security (RLS) controls which rows of data a user can see based on their role."
+                    },
+                    {
+                        question: "Where do you configure workspace membership and access levels in Power BI Service?",
+                        options: [
+                            "Dataset settings",
+                            "Workspace settings",
+                            "Report view",
+                            "Dataflow settings"
+                        ],
+                        correct: 1,
+                        explanation: "Workspace settings allow assigning roles like Admin, Member, and Viewer."
+                    },
+                    {
+                        question: "What must be enabled to keep your dataset up to date automatically?",
+                        options: [
+                            "Manual refresh",
+                            "Scheduled refresh",
+                            "Data profiling",
+                            "Data alerts"
+                        ],
+                        correct: 1,
+                        explanation: "Scheduled refresh runs at defined intervals to update the dataset without manual intervention."
+                    },
+                    {
+                        question: "Which integration allows embedding Power BI reports directly into Microsoft Teams channels?",
+                        options: [
+                            "Teams connector",
+                            "Teams scheduling",
+                            "Teams tabs",
+                            "Teams bot"
+                        ],
+                        correct: 2,
+                        explanation: "Adding a Power BI tab in Teams channels embeds interactive reports for collaboration."
+                    },
+                    {
+                        question: "To export data from a report to Excel, which feature is used?",
+                        options: [
+                            "Analyze in Excel",
+                            "Export to PDF",
+                            "Quick Insights",
+                            "Data alerts"
+                        ],
+                        correct: 0,
+                        explanation: "Analyze in Excel connects the report dataset to Excel for further analysis."
+                    },
+                    {
+                        question: "Which app integration syncs your Power BI dataset with live Excel PivotTables?",
+                        options: [
+                            "Export to CSV",
+                            "Publish to web",
+                            "Analyze in Excel",
+                            "Power BI embedded"
+                        ],
+                        correct: 2,
+                        explanation: "Analyze in Excel syncs data so PivotTables reflect live dataset updates."
+                    },
+                    {
+                        question: "What permission level is required to schedule a dataset refresh in Power BI Service?",
+                        options: [
+                            "Viewer",
+                            "Contributor",
+                            "Member",
+                            "Admin"
+                        ],
+                        correct: 2,
+                        explanation: "Members can schedule refreshes; viewers cannot, and contributors need member-level access for scheduling."
+                    },
+                    {
+                        question: "Which setting controls external sharing of Power BI content outside your organization?",
+                        options: [
+                            "Tenant settings",
+                            "Row-level security",
+                            "Workspace app",
+                            "Data source credentials"
+                        ],
+                        correct: 0,
+                        explanation: "Tenant settings determine if external users can access shared Power BI apps and content."
+                    },
+                    {
+                        question: "How do you share a report with specific colleagues via a link in Power BI Service?",
+                        options: [
+                            "Publish to web",
+                            "Share report link",
+                            "Export to PDF",
+                            "Create dashboard tile"
+                        ],
+                        correct: 1,
+                        explanation: "The Share link option allows sending a secure link granting report access to specified users."
+                    },
+                    {
+                        question: "What feature integrates Power BI visuals directly into Excel workbooks for distribution?",
+                        options: [
+                            "Publish to web",
+                            "Analyze in Excel",
+                            "Power BI publisher for Excel",
+                            "Export to CSV"
+                        ],
+                        correct: 2,
+                        explanation: "Power BI publisher for Excel embeds visuals in workbooks, enabling distribution and refresh."
+                    }
+                ]
+            }
+        };
+        
+        // Current lesson and quiz data
+        let currentLesson = 1;
+        let quizData = [];
+
+        // Quiz state
+        let currentQuestion = 0;
+        let userAnswers = [];
+        let score = 0;
+        let answerSelected = false;
+
+        // DOM elements
+        const lessonNav = document.getElementById('lesson-nav');
+        const questionNumber = document.getElementById('question-number');
+        const questionText = document.getElementById('question-text');
+        const answersGrid = document.getElementById('answers-grid');
+        const feedback = document.getElementById('feedback');
+        const progressInfo = document.getElementById('progress-info');
+        const nextBtn = document.getElementById('next-btn');
+        const quizContent = document.getElementById('quiz-content');
+        const resultsContainer = document.getElementById('results-container');
+        const finalScore = document.getElementById('final-score');
+        const scoreMessage = document.getElementById('score-message');
+        const restartBtn = document.getElementById('restart-btn');
+        const quizSubtitle = document.querySelector('.quiz-subtitle');
+
+        // Initialize navigation
+        function initNavigation() {
+            lessonNav.innerHTML = '';
+            
+            for (let i = 1; i <= 11; i++) {
+                const button = document.createElement('button');
+                button.className = 'lesson-btn';
+                button.textContent = `Lesson ${i.toString().padStart(2, '0')}`;
+                button.dataset.lesson = i;
+                
+                if (i === currentLesson) {
+                    button.classList.add('active');
+                }
+                
+                button.addEventListener('click', () => switchLesson(i));
+                lessonNav.appendChild(button);
+            }
+        }
+        
+        // Switch to a different lesson
+        function switchLesson(lessonNumber) {
+            if (lessonNumber > 11 || lessonNumber < 1) return;
+            
+            currentLesson = lessonNumber;
+            quizData = lessonsData[currentLesson].questions;
+            
+            // Update navigation active state
+            document.querySelectorAll('.lesson-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.dataset.lesson) === currentLesson) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update quiz subtitle
+            const lesson = lessonsData[currentLesson];
+            quizSubtitle.textContent = `${lesson.title} - ${lesson.name}`;
+            
+            // Reset and initialize quiz for this lesson
+            initQuiz();
+        }
+        
+        // Initialize quiz
+        function initQuiz() {
+            currentQuestion = 0;
+            userAnswers = [];
+            score = 0;
+            answerSelected = false;
+            
+            if (quizData.length > 0) {
+                showQuestion();
+                quizContent.classList.remove('hidden');
+                resultsContainer.classList.add('hidden');
+            }
+        }
+
+        // Display current question
+        function showQuestion() {
+            const question = quizData[currentQuestion];
+            
+            questionNumber.textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
+            questionText.textContent = question.question;
+            
+            // Clear previous answers
+            answersGrid.innerHTML = '';
+            
+            // Create answer buttons
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'answer-button';
+                button.innerHTML = `
+                    <span class="answer-letter">${String.fromCharCode(65 + index)}.</span>
+                    <span>${option}</span>
+                `;
+                button.addEventListener('click', () => selectAnswer(index));
+                answersGrid.appendChild(button);
+            });
+            
+            // Reset UI state
+            feedback.classList.add('hidden');
+            nextBtn.disabled = true;
+            answerSelected = false;
+            progressInfo.textContent = 'Select an answer to continue';
+            
+            // Update Next button text
+            if (currentQuestion === quizData.length - 1) {
+                nextBtn.textContent = 'Show Results';
+            } else {
+                nextBtn.textContent = 'Next Question';
+            }
+        }
+
+        // Handle answer selection
+        function selectAnswer(selectedIndex) {
+            if (answerSelected) return; // Prevent multiple selections
+            
+            answerSelected = true;
+            const question = quizData[currentQuestion];
+            const isCorrect = selectedIndex === question.correct;
+            
+            // Store user answer
+            userAnswers[currentQuestion] = selectedIndex;
+            
+            // Update score
+            if (isCorrect) {
+                score++;
+            }
+            
+            // Style all answer buttons
+            const answerButtons = document.querySelectorAll('.answer-button');
+            answerButtons.forEach((button, index) => {
+                button.disabled = true;
+                
+                if (index === question.correct) {
+                    button.classList.add('correct');
+                } else if (index === selectedIndex && !isCorrect) {
+                    button.classList.add('incorrect');
+                } else if (index === selectedIndex) {
+                    button.classList.add('selected');
+                }
+            });
+            
+            // Show feedback
+            showFeedback(isCorrect);
+            
+            // Enable next button
+            nextBtn.disabled = false;
+            progressInfo.textContent = `${currentQuestion + 1} of ${quizData.length} completed`;
+        }
+
+        // Show feedback message
+        function showFeedback(isCorrect) {
+            const question = quizData[currentQuestion];
+            feedback.classList.remove('hidden');
+            
+            if (isCorrect) {
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = `<strong>✓ Correct! Well done.</strong><br><br>${question.explanation || ''}`;
+            } else {
+                feedback.className = 'feedback incorrect';
+                const correctAnswerLetter = String.fromCharCode(65 + question.correct);
+                feedback.innerHTML = `<strong>✗ Incorrect. The correct answer is ${correctAnswerLetter}.</strong><br><br>${question.explanation || ''}`;
+            }
+        }
+
+        // Move to next question or show results
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Display final results
+        function showResults() {
+            quizContent.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            
+            finalScore.textContent = `${score}/${quizData.length}`;
+            
+            // Generate score message
+            const percentage = (score / quizData.length) * 100;
+            let message = '';
+            
+            if (percentage === 100) {
+                message = 'Perfect! You have mastered Business Intelligence concepts.';
+            } else if (percentage >= 80) {
+                message = 'Excellent! You have a strong understanding of Business Intelligence.';
+            } else if (percentage >= 60) {
+                message = 'Good job! You have a solid grasp of the basic concepts.';
+            } else if (percentage >= 40) {
+                message = 'Not bad, but there\'s room for improvement. Review the material and try again.';
+            } else {
+                message = 'Keep studying! Review the lesson material and take the quiz again.';
+            }
+            
+            scoreMessage.textContent = message;
+        }
+
+        // Restart quiz
+        function restartQuiz() {
+            initQuiz();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextQuestion);
+        restartBtn.addEventListener('click', restartQuiz);
+
+        // Initialize the application
+        function initApp() {
+            initNavigation();
+            switchLesson(1); // Start with Lesson 1
+        }
+        
+        // Start the application
+        initApp();
+    </script>
+</body>
+</html>
