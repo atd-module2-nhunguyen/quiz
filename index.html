@@ -790,442 +790,172 @@
         const lessonsData = {
             1: {
                 title: "Lesson 01",
-                name: "Introduction to Business Intelligence and Career Opportunities",
+                name: "Introduction to Business Intelligence",
                 questions: [
                     {
-                        question: "What is the primary responsibility of a Data Engineer?",
+                        question: "What is the main question addressed by a Data Engineer?",
                         options: [
-                            "Analyzing historical sales patterns",
-                            "Building and maintaining data pipelines",
-                            "Creating executive dashboards",
-                            "Building predictive models",
+                            "Why did the data fail to update in the pipeline?",
+                            "How do we get the data?",
+                            "What will happen based on modeling?",
+                            "What happened in the business yesterday?",
                         ],
                         correct: 1,
-                        explanation: "Data Engineers focus on infrastructure development, building and maintaining data pipelines that process millions of records daily, connecting disparate data sources into unified systems."
+                        explanation: "Data Engineers focus on data infrastructure and pipelines, addressing 'How do we get the data?'"
                     },
                     {
-                        question: "Which data professional focuses on the question \"What will happen?\"",
+                        question: "Which role focuses on predictive modeling and machine learning?",
                         options: [
+                            "Business Intelligence Analyst",
+                            "Data Scientist",
                             "Data Analyst",
                             "Data Engineer",
+                        ],
+                        correct: 1,
+                        explanation: "Data Scientists build models predicting future outcomes, unlike BI Analysts focusing on descriptive insights."
+                    },
+                    {
+                        question: "What is Business Intelligence defined as in the lesson?",
+                        options: [
+                            "A technology-enabled process analyzing data for actionable decisions.",
+                            "Manual reporting processes without automation.",
+                            "Simple charts created from spreadsheets.",
+                            "Programming methodology for data pipeline integration.",
+                        ],
+                        correct: 0,
+                        explanation: "BI is defined as a process that analyzes data and provides actionable info for business decisions."
+                    },
+                    {
+                        question: "Which layer in the BI 'Three-Layer Cake' includes dashboards and alerts?",
+                        options: [
+                            "Data Foundation Layer",
+                            "Processing and Analysis Layer",
+                            "Presentation and Action Layer",
+                            "Data Integration Layer",
+                        ],
+                        correct: 2,
+                        explanation: "The Presentation and Action layer includes dashboards, reports, alerts, and mobile access."
+                    },
+                    {
+                        question: "What BI role supports tactical decision makers with KPIs and dashboards?",
+                        options: [
                             "Data Scientist",
-                            "BI Analyst",
+                            "Data Engineer",
+                            "Business Intelligence Analyst",
+                            "Data Analyst",
                         ],
                         correct: 2,
-                        explanation: "Data Scientists focus on predictive modeling and forecasting future outcomes using machine learning and statistical methods to answer \"What will happen?\""
+                        explanation: "BI Analysts create strategic dashboards and KPIs for operational and tactical decisions."
                     },
                     {
-                        question: "In Tony's Pizza Palace case study, which team member was responsible for creating dashboards and translating insights into actions?",
+                        question: "What is anchoring bias in decision-making?",
                         options: [
-                            "Maria - Data Engineer",
-                            "Sarah - Data Scientist",
-                            "James - Data Analyst",
-                            "Alex - BI Analyst",
-                        ],
-                        correct: 3,
-                        explanation: "Alex, the BI Analyst, created dashboards, translated insights into actions, and presented findings to stakeholders, telling Tony \"Green means order more, red means we have enough.\""
-                    },
-                    {
-                        question: "What is the correct first stage in the 7-stage BI Process?",
-                        options: [
-                            "Data Source Identification",
-                            "Data Integration & Preparation",
-                            "Define Business Objectives & Requirements",
-                            "Data Analysis & Insight Generation",
-                        ],
-                        correct: 2,
-                        explanation: "The first stage is \"Define Business Objectives & Requirements\" which involves identifying specific business questions, establishing success criteria, and gathering stakeholder requirements."
-                    },
-                    {
-                        question: "Which bias causes people to judge probability by how easily examples come to mind, often overreacting to recent vivid events?",
-                        options: [
-                            "Overconfidence Bias",
-                            "Availability Heuristic",
-                            "Groupthink",
-                            "Anchoring Bias",
+                            "Ignoring conflicting data and seeking confirming evidence.",
+                            "Over-relying on early numbers or initial estimates.",
+                            "Prioritizing group consensus over dissenting views.",
+                            "Overestimating one’s knowledge or success chances.",
                         ],
                         correct: 1,
-                        explanation: "Availability Heuristic involves judging probability and importance by how easily examples come to mind, such as dramatically overestimating cybersecurity risks after hearing about a recent well-publicized data breach."
+                        explanation: "Anchoring bias is the tendency to overly rely on the first information received, such as past budgets."
                     },
                     {
-                        question: "In which organizational structure are data analysts embedded within individual business departments like marketing, sales, and operations?",
+                        question: "Which decision type involves multi-year horizon and market entry?",
                         options: [
-                            "Centralized Model",
-                            "Decentralized Model",
-                            "Hybrid Model",
-                            "Center of Excellence Model",
-                        ],
-                        correct: 1,
-                        explanation: "The Decentralized Model has data analysts embedded within individual business departments, providing deep business domain knowledge and faster turnaround but potentially causing inconsistent methods."
-                    },
-                    {
-                        question: "What are SFIA Levels 5-6 primarily focused on?",
-                        options: [
-                            "Follow and Assist - Entry-level guided work",
-                            "Apply and Enable - Independent work with periodic guidance",
-                            "Ensure and Initiate - Lead projects, teams, and strategic initiatives",
-                            "Set Strategy - Organizational leadership and industry influence",
-                        ],
-                        correct: 2,
-                        explanation: "SFIA Levels 5-6 (Ensure and Initiate) are focused on leading projects, teams, and strategic initiatives, representing senior professional and leadership responsibilities."
-                    },
-                    {
-                        question: "Which type of analytics focuses on \"Why did it happen?\" and involves investigating causes behind past events?",
-                        options: [
-                            "Descriptive Analytics",
-                            "Diagnostic Analytics",
-                            "Predictive Analytics",
-                            "Prescriptive Analytics",
-                        ],
-                        correct: 1,
-                        explanation: "Diagnostic Analytics investigates the causes behind past events, involving identifying anomalies, collecting related data, and using statistical techniques to uncover relationships."
-                    },
-                    {
-                        question: "According to the lesson, what is the typical ROI (Return on Investment) percentage for Business Intelligence implementations over three years?",
-                        options: [
-                            "500%",
-                            "800%",
-                            "1,300%",
-                            "2,000%",
-                        ],
-                        correct: 2,
-                        explanation: "The lesson states that organizations implementing BI typically see an average ROI of 1,300% over three years, demonstrating significant business value."
-                    },
-                    {
-                        question: "In the BI \"Three-Layer Cake\" model, what is the purpose of Layer 2 (Processing & Analysis)?",
-                        options: [
-                            "Store raw data from various sources",
-                            "Transform raw data into clean, integrated, analysis-ready information",
-                            "Present user-friendly dashboards and reports",
-                            "Collect data from ERP and CRM systems",
-                        ],
-                        correct: 1,
-                        explanation: "Layer 2 (Processing & Analysis) transforms raw data into clean, integrated, analysis-ready information through ETL processes, data warehouses, OLAP cubes, statistical analysis, and data mining with automated processing and quality validation."
-                    },
-                ]
-            },
-            2: {
-                title: "Lesson 02",
-                name: "Introduction to Business Intelligence and Career Opportunities",
-                questions: [
-                    {
-                        question: "Which of the following best describes the primary role of a BI Analyst?",
-                        options: [
-                            "Building and maintaining data pipelines",
-                            "Translating data insights into executive-friendly recommendations",
-                            "Building predictive models for forecasting",
-                            "Performing statistical analysis on research data",
-                        ],
-                        correct: 1,
-                        explanation: "BI Analysts serve as \"Data Translators\" who bridge analysis and action, connecting data insights to business strategy and presenting findings to executives for decision-making."
-                    },
-                    {
-                        question: "What is the main question that a Data Analyst seeks to answer?",
-                        options: [
-                            "How do we get the data?",
-                            "What should we do?",
-                            "What happened?",
-                            "What will happen?",
-                        ],
-                        correct: 2,
-                        explanation: "Data Analysts focus on explaining \"What happened?\" through analysis of historical sales patterns, identifying peak times, and creating daily/weekly reports."
-                    },
-                    {
-                        question: "Which cognitive bias involves seeking information that confirms existing beliefs while ignoring contradictory evidence?",
-                        options: [
-                            "Anchoring Bias",
-                            "Groupthink",
-                            "Confirmation Bias",
-                            "Availability Heuristic",
-                        ],
-                        correct: 2,
-                        explanation: "Confirmation Bias is defined as the tendency to seek information that confirms existing beliefs. The example given is a CEO dismissing negative customer feedback about a new product they love."
-                    },
-                    {
-                        question: "In Tony's Pizza Palace example, what were the measurable results after implementing the data team?",
-                        options: [
-                            "15% reduction in food waste only",
-                            "30% increase in revenue and 25% reduction in food waste",
-                            "25% reduction in food waste, 30% increase in customer satisfaction, 20% growth in revenue",
-                            "40% increase in customer satisfaction and 20% revenue growth",
-                        ],
-                        correct: 2,
-                        explanation: "The lesson states the results were: 25% reduction in food waste, 30% increase in customer satisfaction, 20% growth in revenue."
-                    },
-                    {
-                        question: "Which stage of the decision-making process does BI support the most by providing continuous monitoring and feedback loops?",
-                        options: [
-                            "Problem Recognition",
-                            "Information Gathering",
-                            "Evaluation & Choice",
-                            "Monitoring & Feedback",
-                        ],
-                        correct: 3,
-                        explanation: "BI's monitoring and feedback stage tracks KPIs, compares results against targets, and generates feedback loops for continual improvement, directly supporting the sixth stage of decision-making."
-                    },
-                    {
-                        question: "According to the lesson, which BI tool is described as having \"industry-leading visualization capabilities\" and excellent performance with large datasets (100M+ rows)?",
-                        options: [
-                            "Power BI",
-                            "Google Data Studio",
-                            "Tableau",
-                            "Python",
-                        ],
-                        correct: 2,
-                        explanation: "Tableau is highlighted as the \"Visualization Champion\" with patented VizQL technology for lightning-fast rendering and exceptional performance with very large datasets exceeding 100 million rows."
-                    },
-                    {
-                        question: "In the 7-stage BI Process, what is the correct sequence from stages 3 to 5?",
-                        options: [
-                            "Data Integration, Data Analysis, Data Storage",
-                            "Data Storage, Data Integration, Data Analysis",
-                            "Data Integration, Data Storage, Data Analysis",
-                            "Data Analysis, Data Storage, Data Integration",
-                        ],
-                        correct: 2,
-                        explanation: "The correct sequence is: Stage 3 - Data Integration & Preparation (ETL), Stage 4 - Data Storage & Infrastructure, Stage 5 - Data Analysis & Insight Generation."
-                    },
-                    {
-                        question: "How does Business Intelligence systematically counter Anchoring Bias according to the lesson?",
-                        options: [
-                            "By displaying only current numbers without historical context",
-                            "By displaying 3-year trends AND industry comparisons, not just current numbers",
-                            "By eliminating all numerical data",
-                            "By showing only the most recent data point",
-                        ],
-                        correct: 1,
-                        explanation: "BI solutions for anchoring bias involve displaying historical context and comprehensive benchmarking with 3-year trends and industry comparisons to overcome relying only on initial or recent numbers."
-                    },
-                    {
-                        question: "What is the relationship between the three decision-making levels (Strategic, Tactical, Operational) and their respective BI support needs?",
-                        options: [
-                            "All levels require identical BI dashboards and reports",
-                            "Operational decisions need real-time automated reports; Tactical needs dashboards and forecasting; Strategic needs trend analysis and scenario modeling",
-                            "BI is only needed for strategic decisions",
-                            "Operational decisions are most important and require the most BI support",
-                        ],
-                        correct: 1,
-                        explanation: "The lesson distinguishes that Strategic needs trend/scenario analysis (3-5 years), Tactical needs dashboards/KPI tracking (6 months-2 years), and Operational needs automated reports/alerts (daily-monthly)."
-                    },
-                    {
-                        question: "When selecting a BI tool for an organization, which framework should guide the decision according to the lesson?",
-                        options: [
-                            "Only consider the tool with the best visualization capabilities",
-                            "Match specific organizational needs, technical capabilities, and strategic constraints; recognize no universal \"best\" tool exists",
-                            "Choose the cheapest option available",
-                            "Always choose the most popular tool in the market",
-                        ],
-                        correct: 1,
-                        explanation: "The lesson emphasizes that successful tool selection depends on matching specific organizational needs, technical capabilities, and strategic constraints. Different tools serve different purposes (Power BI for Microsoft environments, Tableau for visualization, Data Studio for budget-conscious orgs, Python for customization)."
-                    },
-                    {
-                        question: "According to the IBM definition provided in the lesson, what is the primary purpose of data?",
-                        options: [
-                            "To store information in databases",
-                            "To transform raw data points into valuable insights that improve decision-making",
-                            "To replace human judgment in business",
-                            "To reduce operational costs",
-                        ],
-                        correct: 1,
-                        explanation: "Data is defined as a collection of facts, numbers, words, and observations that organizations transform through processing and analysis into valuable insights that improve decision-making and drive business outcomes."
-                    },
-                    {
-                        question: "Which level of the DIKW Pyramid represents \"I am 5cm shorter than class average\"?",
-                        options: [
-                            "Data",
-                            "Information",
-                            "Knowledge",
-                            "Wisdom",
-                        ],
-                        correct: 2,
-                        explanation: "Knowledge involves comparing and analyzing information to derive insights, such as comparing individual height to class average."
-                    },
-                    {
-                        question: "What is the main difference between qualitative and quantitative data?",
-                        options: [
-                            "Qualitative data is more important",
-                            "Quantitative data is numerical and measurable; qualitative data is descriptive and non-numerical",
-                            "All data types are essentially the same",
-                            "Qualitative data cannot be analyzed",
-                        ],
-                        correct: 1,
-                        explanation: "Quantitative data answers \"how much\" or \"how many\" with numerical values, while qualitative data captures characteristics and qualities in descriptive form."
-                    },
-                    {
-                        question: "Which of the following is an example of ordinal data?",
-                        options: [
-                            "Pizza toppings: Pepperoni, Mushroom, Cheese",
-                            "Service rating: Poor, Fair, Good, Excellent",
-                            "Payment method: Cash, Credit Card, PayPal",
-                            "Pizza type: Margherita, Supreme, Hawaiian",
-                        ],
-                        correct: 1,
-                        explanation: "Ordinal data has a meaningful order or ranking. Service ratings (Poor < Fair < Good < Excellent) can be ranked, unlike nominal categories."
-                    },
-                    {
-                        question: "In the context of quantitative data, what distinguishes discrete data from continuous data?",
-                        options: [
-                            "Discrete data uses whole numbers; continuous data can take any value within a range",
-                            "Discrete data is always larger in volume",
-                            "Continuous data is more accurate",
-                            "Discrete data cannot be analyzed statistically",
+                            "Strategic decisions",
+                            "Tactical decisions",
+                            "Operational decisions",
+                            "Compliance decisions",
                         ],
                         correct: 0,
-                        explanation: "Discrete data represents countable, distinct values (e.g., number of pizzas sold), while continuous data can take infinitely subdivided values (e.g., price $12.99)."
+                        explanation: "Strategic decisions typically involve long-term planning like market entry or acquisitions."
                     },
                     {
-                        question: "What percentage of enterprise data is typically unstructured according to the lesson?",
+                        question: "What is the BI role of feedback in decision-making?",
                         options: [
-                            "Approximately 20%",
-                            "Approximately 10%",
-                            "Approximately 80%",
-                            "Approximately 50%",
-                        ],
-                        correct: 2,
-                        explanation: "The lesson states that structured data represents ~20%, semi-structured ~10%, and unstructured data comprises approximately 80% of enterprise data."
-                    },
-                    {
-                        question: "Which of the following best describes metadata in a business context?",
-                        options: [
-                            "Raw numerical values used for analysis",
-                            "Information that describes the characteristics, context, and structure of data elements",
-                            "The final output of a business intelligence system",
-                            "Customer feedback about a product",
+                            "Generating alternatives before decisions.",
+                            "Tracking KPIs and comparing results against objectives.",
+                            "Cleaning and organizing data for analysis.",
+                            "Automating report creation processes.",
                         ],
                         correct: 1,
-                        explanation: "Metadata is \"data about data\" that describes characteristics, context, and structure. Example: column name, data type, description, format, and nullable status."
+                        explanation: "BI supports monitoring and feedback loops to assess results and enable improvement."
                     },
                     {
-                        question: "In the \"Four V's of Big Data,\" which V refers to the quality and trustworthiness of data?",
+                        question: "What is confirmation bias?",
                         options: [
-                            "Volume",
-                            "Velocity",
-                            "Variety",
-                            "Veracity",
-                        ],
-                        correct: 3,
-                        explanation: "Veracity refers to data quality and trustworthiness, such as ensuring customer addresses are accurate or review authenticity in a pizza chain example."
-                    },
-                    {
-                        question: "According to the lesson, which of the following is NOT one of the six dimensions of data quality?",
-                        options: [
-                            "Accuracy",
-                            "Completeness",
-                            "Validity",
-                            "Predictability",
-                        ],
-                        correct: 3,
-                        explanation: "The six dimensions are: Accuracy, Completeness, Consistency, Timeliness, Validity, and Uniqueness. Predictability is not listed as a data quality dimension."
-                    },
-                    {
-                        question: "What is the primary purpose of data profiling in data quality management?",
-                        options: [
-                            "To store data in a database",
-                            "To review the structure and content of existing data to evaluate quality and identify anomalies",
-                            "To delete incorrect data",
-                            "To create visualizations",
-                        ],
-                        correct: 1,
-                        explanation: "Data profiling reviews data structure and content to evaluate quality, establish baselines, reveal anomalies, and assess relationships between datasets."
-                    },
-                    {
-                        question: "In the pizza chain data quality challenge mentioned, duplicate customer records caused issues because of:",
-                        options: [
-                            "Poor delivery service",
-                            "Multiple entry points, inconsistent name formats, lack of validation rules, and staff training gaps",
-                            "High prices",
-                            "Insufficient marketing",
-                        ],
-                        correct: 1,
-                        explanation: "The lesson identifies multiple root causes: different entry channels (online, phone, in-store), format inconsistencies (Hoa vs Hoà), missing validation rules, and inadequate staff training."
-                    },
-                    {
-                        question: "Which internal data source is primarily used to track customer interactions, sales pipelines, and order history?",
-                        options: [
-                            "ERP Systems",
-                            "POS Systems",
-                            "CRM Systems",
-                            "WMS Systems",
-                        ],
-                        correct: 2,
-                        explanation: "CRM (Customer Relationship Management) Systems track customer interactions, sales pipelines, and in the pizza example, customer profiles, order history, loyalty points, and preferences."
-                    },
-                    {
-                        question: "What is the key advantage of using external data sources like social media APIs for a pizza chain?",
-                        options: [
-                            "They replace the need for internal data",
-                            "They provide real-time insights into customer sentiment, brand mentions, and trending preferences",
-                            "They are cheaper than internal systems",
-                            "They require no data quality management",
-                        ],
-                        correct: 1,
-                        explanation: "External social media data like Twitter and Instagram APIs help monitor brand reputation, identify trending preferences, and track real-time customer sentiment."
-                    },
-                    {
-                        question: "According to the lesson, which of the following best describes the difference between structured and semi-structured data in terms of schema?",
-                        options: [
-                            "Structured has fixed schema; semi-structured has flexible tags but lacks rigid schema",
-                            "Structured data is less organized",
-                            "Semi-structured data cannot be queried",
-                            "They are identical in organization",
+                            "Seeking only data confirming pre-existing beliefs.",
+                            "Using historical data trends for planning.",
+                            "Using statistical methods rigorously.",
+                            "Sharing data across departments.",
                         ],
                         correct: 0,
-                        explanation: "Structured data uses fixed schemas organized in tables (SQL databases), while semi-structured data uses flexible tags and hierarchical organization (JSON/XML)."
+                        explanation: "Confirmation bias leads to ignoring contradictory evidence and only accepting supportive info."
                     },
                     {
-                        question: "In a hospital setting, which system is responsible for storing and distributing medical images like X-rays, CT, and MRI scans?",
+                        question: "What are common BI tools covered in the lesson?",
                         options: [
-                            "EHR (Electronic Health Records)",
-                            "HIS (Hospital Information Systems)",
-                            "PACS (Picture Archiving and Communication System)",
-                            "LIS (Laboratory Information Systems)",
+                            "Microsoft Power BI, Tableau, Google Data Studio, Python-based tools.",
+                            "Adobe Photoshop, Excel macros, MySQL command line.",
+                            "PowerPoint, Word, Outlook.",
+                            "Salesforce automation, Google Docs, Slack apps.",
                         ],
-                        correct: 2,
-                        explanation: "PACS (Picture Archiving and Communication System) is specifically designed to store, retrieve, and distribute medical imaging data including X-rays, CT, MRI, ultrasounds, and mammograms."
+                        correct: 0,
+                        explanation: "The lesson discusses major BI tools like Power BI, Tableau, Google Data Studio, and programmable Python solutions."
                     },
                     {
-                        question: "The principle \"Garbage In, Garbage Out\" (GIGO) refers to:",
+                        question: "What is the primary purpose of a BI Center of Excellence (CoE)?",
                         options: [
-                            "Poor quality delivery services",
-                            "The quality of output is directly dependent on the quality of input data",
-                            "High employee turnover",
-                            "Inefficient processes",
+                            "Centralize governance and standards, train and support analysts.",
+                            "Manage IT infrastructure and physical servers.",
+                            "Provide customer service for business users.",
+                            "Develop marketing campaigns and sales pitches.",
                         ],
-                        correct: 1,
-                        explanation: "GIGO principle states that if inaccurate, incomplete, or inconsistent data is input into a system, flawed and unreliable results will be generated, leading to poor decisions."
+                        correct: 0,
+                        explanation: "A BI CoE maintains governance frameworks, standards, and training while supporting decentralized execution."
                     },
                     {
-                        question: "Which data quality practice involves correcting errors and inconsistencies in raw datasets through standardization and deduplication?",
+                        question: "Which of these is an example of a BI tool emerging trend?",
                         options: [
-                            "Data Profiling",
-                            "Data Validation",
-                            "Data Cleansing",
-                            "Data Monitoring",
+                            "Real-time analytics enabling immediate decision making.",
+                            "Manual spreadsheet reporting from email data.",
+                            "Slow batch processing data updates for weeks.",
+                            "Isolated data silos without sharing or collaboration.",
                         ],
-                        correct: 2,
-                        explanation: "Data Cleansing (data cleaning) corrects errors and inconsistencies through standardization, adjusting outliers, deduplication, and addressing missing values."
+                        correct: 0,
+                        explanation: "Emerging BI trends include real-time analytics that process data instantly for critical decisions."
                     },
                     {
-                        question: "In the pizza order processing example, what valuable data is generated at the \"Order Placement\" stage?",
+                        question: "How does BI reduce overconfidence bias?",
                         options: [
-                            "Only the pizza size",
-                            "Customer information, order details, channel of order, fulfillment preference, and payment method",
-                            "Delivery route information",
-                            "Cooking temperature",
-                        ],
-                        correct: 1,
-                        explanation: "Order placement captures: customer ID/details, pizza type/size/toppings, timestamp, channel (online/phone/in-store/kiosk), delivery/pickup preference, and payment method."
-                    },
-                    {
-                        question: "Which role is responsible for ensuring accuracy, completeness, and appropriate usage of organizational data, including implementing quality standards and metadata management?",
-                        options: [
-                            "Database Administrator",
-                            "Data Steward",
-                            "Business Analyst",
-                            "IT Manager",
+                            "Encouraging gut instinct and intuition.",
+                            "Scenario modeling and showing multiple forecast outcomes.",
+                            "Ignoring outliers and arbitrary assumptions.",
+                            "Limiting data access to senior executives only.",
                         ],
                         correct: 1,
-                        explanation: "Data Steward is the guardian of organizational data, responsible for quality management, governance, metadata management, security, and stakeholder collaboration."
+                        explanation: "Scenario modeling presents best-case, worst-case, and likely outcomes, countering overconfidence bias."
+                    },
+                    {
+                        question: "In BI decision-making, where is the role of automated alerts?",
+                        options: [
+                            "Identifying problems early by flagging anomalies.",
+                            "Designing dashboards only.",
+                            "Building data warehouses.",
+                            "Generating raw data streams.",
+                        ],
+                        correct: 0,
+                        explanation: "Automated alerts help recognize issues in the early stages, improving problem recognition."
+                    },
+                    {
+                        question: "Which statement provides the best job statement example for a BI Analyst?",
+                        options: [
+                            "As a Business Intelligence Analyst, I help the CEO quickly access sales metrics by creating reports with Power BI.",
+                            "As a Data Scientist, I run complex predictive models using Python and machine learning.",
+                            "As a Data Engineer, I build data pipelines and integration systems.",
+                            "As a Marketing Analyst, I use Excel to draft campaign analyses monthly.",
+                        ],
+                        correct: 0,
+                        explanation: "The lesson’s job statement provides a structured example focused on a BI Analyst helping the CEO with reports using Power BI."
                     },
                 ]
             },
