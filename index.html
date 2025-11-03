@@ -1119,6 +1119,177 @@
                     },
                 ]
             },
+            3: {
+                title: "Lesson 03",
+                name: "Descriptive Statistics",
+                questions: [
+                    {
+                        question: "Which statement best defines Descriptive Statistics according to the lesson?",
+                        options: [
+                            "It summarizes and describes the main characteristics of a dataset to explain what has happened in the data.",
+                            "It uses sample data to make predictions or conclusions about a larger population to understand what might happen.",
+                            "It involves creating complex machine learning models to automate business processes and drive future outcomes.",
+                            "It focuses exclusively on building visual dashboards for executives without performing underlying calculations.",
+                        ],
+                        correct: 0,
+                        explanation: "The lesson defines descriptive statistics as methods to summarize and describe the characteristics of a current dataset, explaining \"what has happened.\""
+                    },
+                    {
+                        question: "Which of the following best describes the 'Mean' as a measure of central tendency?",
+                        options: [
+                            "The middle value in a dataset when the values are sorted in ascending or descending order, resistant to outliers.",
+                            "The arithmetic average of a dataset, calculated by summing all values and dividing by the number of observations.",
+                            "The value that appears most frequently in a dataset, which is especially useful for analyzing categorical data types.",
+                            "The difference between the maximum and minimum values in a dataset, providing a simple measure of overall spread.",
+                        ],
+                        correct: 1,
+                        explanation: "The lesson defines the mean as the sum of all values divided by the count of observations, representing the arithmetic average of the data."
+                    },
+                    {
+                        question: "For which type of data is the 'Mode' the most appropriate measure of central tendency?",
+                        options: [
+                            "Continuous data with a symmetric distribution, where the central value is needed for further statistical tests.",
+                            "Skewed numerical data where extreme values, or outliers, might disproportionately affect the arithmetic average.",
+                            "Categorical data, such as product preference or defect types, to identify the most common or popular category.",
+                            "Time-series data where the goal is to find the midpoint of a specific period to analyze seasonal trends or cycles.",
+                        ],
+                        correct: 2,
+                        explanation: "The lesson highlights that the mode is particularly useful for categorical data to identify the most frequent category, such as in product preference analysis."
+                    },
+                    {
+                        question: "What does the 'Range' measure in a dataset?",
+                        options: [
+                            "The average distance of each data point from the mean, showing how consistently data clusters around the center.",
+                            "The spread of the middle 50% of the data, which provides a robust measure of variability unaffected by outliers.",
+                            "The most frequently occurring value within the dataset, indicating the peak of the data's distribution pattern.",
+                            "The total spread of the data, calculated as the difference between the maximum and minimum values in the set.",
+                        ],
+                        correct: 3,
+                        explanation: "The range is defined as the simplest measure of dispersion, calculated by subtracting the minimum value from the maximum value to show total spread."
+                    },
+                    {
+                        question: "In a dataset with extreme outliers, such as executive salaries in a company-wide analysis, which measure of central tendency provides the most representative \"typical\" value?",
+                        options: [
+                            "The Median, because it represents the middle value of the sorted data and is not influenced by extreme high or low values.",
+                            "The Mean, because it incorporates every value in the dataset, providing a complete and comprehensive average value.",
+                            "The Mode, because it identifies the most common salary level, which is the most realistic representation of employee pay.",
+                            "The Range, because it shows the full spectrum of salaries from the lowest-paid employee to the highest-paid executive.",
+                        ],
+                        correct: 0,
+                        explanation: "The lesson emphasizes that the median is outlier-resistant, making it the preferred measure for skewed data (like salaries) where the mean would be inflated."
+                    },
+                    {
+                        question: "What is the primary purpose of creating a Histogram?",
+                        options: [
+                            "To compare the distribution of several different groups side-by-side using a five-number summary for each group.",
+                            "To display the frequency distribution of a single continuous variable by grouping data into bins of a specific size.",
+                            "To visualize the relationship between two different quantitative variables to identify correlation and trend lines.",
+                            "To track the performance of a key business metric over a consistent time interval, such as daily or monthly sales.",
+                        ],
+                        correct: 1,
+                        explanation: "A histogram's main purpose is to visualize the frequency distribution of continuous data, revealing its shape, center, and spread through bars representing bins."
+                    },
+                    {
+                        question: "In a box plot, what does the 'box' itself represent?",
+                        options: [
+                            "The full range of the dataset, extending from the minimum value to the maximum value, excluding any identified outliers.",
+                            "The range containing approximately 95% of the central data points according to the Empirical Rule for distributions.",
+                            "The Interquartile Range (IQR), which contains the middle 50% of the data between the first quartile (Q1) and the third quartile (Q3).",
+                            "The area where the mean and the mode of the dataset are located, indicating the most common values in the distribution.",
+                        ],
+                        correct: 2,
+                        explanation: "The box in a box plot visualizes the Interquartile Range (IQR), with the bottom of the box at Q1 and the top at Q3, thus representing the middle 50% of the data."
+                    },
+                    {
+                        question: "What does a high Standard Deviation indicate about a dataset?",
+                        options: [
+                            "The data points are tightly clustered around the mean, suggesting a high degree of consistency and predictability.",
+                            "The dataset has a symmetric, bell-shaped distribution where the mean, median, and mode are all located at the same point.",
+                            "The dataset contains no outliers, and all values fall within one standard deviation of the calculated average value.",
+                            "The data points are widely spread out from the mean, indicating high variability, less consistency, and greater risk.",
+                        ],
+                        correct: 3,
+                        explanation: "A high standard deviation signifies that data points are, on average, far from the mean, which implies greater variability, less predictability, and higher uncertainty or risk."
+                    },
+                    {
+                        question: "In a right-skewed (positively skewed) distribution, what is the typical relationship between the mean, median, and mode?",
+                        options: [
+                            "The mean is greater than the median, which is greater than the mode, as the long tail of high values pulls the mean to the right.",
+                            "The mode is greater than the median, which is greater than the mean, as the long tail of low values pulls the mean to the left.",
+                            "The mean, median, and mode are all approximately equal, which is the defining characteristic of a symmetric, normal distribution.",
+                            "The mean is less than the median, but the median is equal to the mode, a pattern that is characteristic of a bimodal distribution.",
+                        ],
+                        correct: 0,
+                        explanation: "For a right-skewed distribution, the long tail on the right (high values) pulls the mean to be greater than the median, which is typically greater than the mode."
+                    },
+                    {
+                        question: "What does a bimodal distribution in a business dataset, such as customer purchase amounts, often suggest?",
+                        options: [
+                            "All customers are behaving in a uniform and predictable manner, with purchase amounts evenly distributed across a set range.",
+                            "There are two distinct underlying customer groups or populations, such as regular shoppers and bulk buyers, with different behaviors.",
+                            "The data is highly skewed, and the average purchase amount is not a reliable measure of the typical customer's spending habits.",
+                            "The data collection process has errors, as a valid dataset should only ever have a single peak or mode in its distribution.",
+                        ],
+                        correct: 1,
+                        explanation: "The lesson explains that a bimodal distribution, which has two peaks, suggests the presence of two different underlying populations or processes, requiring segmentation."
+                    },
+                    {
+                        question: "According to the outlier detection rule presented in the lesson, how is an upper outlier formally identified using the Interquartile Range (IQR)?",
+                        options: [
+                            "Any value that is greater than the third quartile (Q3) is automatically classified as a potential upper outlier for investigation.",
+                            "Any value that falls more than three standard deviations above the mean of the dataset is considered an upper outlier.",
+                            "Any value that is greater than Q3 + (1.5 × IQR) is formally identified as an upper outlier, falling beyond the upper whisker.",
+                            "Any value that is located in the top 1% of the dataset, as determined by the 99th percentile, is an upper outlier.",
+                        ],
+                        correct: 2,
+                        explanation: "The lesson specifies the formal rule for outlier detection: an upper outlier is any data point that is greater than the third quartile plus 1.5 times the IQR."
+                    },
+                    {
+                        question: "What is the primary business implication of a distribution with high kurtosis (a leptokurtic or heavy-tailed distribution)?",
+                        options: [
+                            "The business process is highly stable and predictable, with outcomes tightly clustered and a very low probability of extreme events.",
+                            "The dataset follows a perfect normal distribution, allowing for the reliable application of the 68-95-99.7 Empirical Rule.",
+                            "The data is symmetrically distributed but is flatter than a normal curve, meaning there are fewer values in the center and tails.",
+                            "There is a greater probability of extreme outcomes (outliers), indicating higher risk and unpredictability in the process.",
+                        ],
+                        correct: 3,
+                        explanation: "High kurtosis (leptokurtic) means the distribution has \"heavy tails,\" which indicates a greater frequency of extreme values and therefore higher risk and uncertainty."
+                    },
+                    {
+                        question: "When would a box plot be a more suitable visualization than a histogram?",
+                        options: [
+                            "When the primary goal is to compare the distributions of a continuous variable across several different groups or categories.",
+                            "When it is essential to see the detailed shape of a single distribution, including identifying potential gaps or multiple peaks.",
+                            "When the audience is non-technical and requires a simple visualization that shows exact frequency counts for different values.",
+                            "When the dataset is very large, and the visualization needs to be generated quickly without performing complex calculations.",
+                        ],
+                        correct: 0,
+                        explanation: "The lesson highlights that box plots excel at comparing distributions side-by-side across multiple groups, while histograms are better for exploring one single distribution in detail."
+                    },
+                    {
+                        question: "What is the most significant limitation of using the 'Range' as a measure of dispersion?",
+                        options: [
+                            "It is very difficult and time-consuming to calculate for large datasets, requiring complex software and statistical skills.",
+                            "It is highly sensitive to outliers, as a single extreme value can dramatically alter the measure and misrepresent the data's true variability.",
+                            "It cannot be used for continuous data and is only applicable to discrete data that consists of countable whole numbers.",
+                            "It does not provide any information about the central tendency of the data, such as the mean or median, making it incomplete.",
+                        ],
+                        correct: 1,
+                        explanation: "The lesson explicitly states that the range is highly sensitive to outliers, as one extreme value defines the entire measure, which can be misleading about overall consistency."
+                    },
+                    {
+                        question: "In a scatter plot analyzing the relationship between advertising spend and revenue, what does an R-squared (R²) value of 0.76 indicate?",
+                        options: [
+                            "There is a negative correlation, meaning that as advertising spend increases, the resulting revenue tends to consistently decrease.",
+                            "The trend line is not a good fit for the data, as the R-squared value is below the acceptable threshold of 0.95 for analysis.",
+                            "Advertising spend explains 76% of the variation in monthly revenue, indicating a strong and meaningful relationship between the two variables.",
+                            "For every dollar spent on advertising, the business can expect to generate a return of exactly 76 cents in additional revenue.",
+                        ],
+                        correct: 2,
+                        explanation: "As shown in the business example for scatter plots, the R² value indicates the percentage of the variance in the dependent variable that is predictable from the independent variable."
+                    },
+                ]
+            },
         };
         
         // Current lesson and quiz data
